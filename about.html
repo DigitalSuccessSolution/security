@@ -322,6 +322,20 @@
     </div>
   </header>
 
+<!-- About Hero Section -->
+<section
+  class="w-full h-[70vh] md:h-[80vh] flex items-center justify-center relative bg-cover bg-center"
+  style="background-image: url('images/about-hero.png');"
+>
+  <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+  <div class="relative z-10 text-center px-4">
+    <h1 class="text-white text-3xl md:text-5xl font-bold mb-4">About Us</h1>
+    <p class="text-white text-base md:text-lg max-w-xl mx-auto">
+      Learn more about our mission, our values, and the professional team behind our services.
+    </p>
+  </div>
+</section>
 
 
 
@@ -770,14 +784,40 @@
     </div>
   </footer>
   <!-- Floating Buttons -->
-  <a href="tel:+919876543210"
-    class="floating-button w-14 h-14 bg-primary rounded-full flex items-center justify-center shadow-lg">
-    <i class="ri-phone-fill ri-lg text-white"></i>
-  </a>
-  <a href="https://wa.me/919876543210"
-    class="floating-button whatsapp w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg">
-    <i class="ri-whatsapp-fill ri-lg text-white"></i>
-  </a>
+<style>
+  .floating-button {
+    position: fixed;
+    right: 20px;
+    z-index: 50;
+    transition: transform 0.3s ease;
+  }
+
+  .floating-button.call {
+    bottom: 100px;
+    background-color: white;
+  }
+
+  .floating-button.whatsapp {
+    bottom: 40px;
+  }
+
+  .floating-button:hover {
+    transform: scale(1.1);
+  }
+</style>
+
+<!-- Call Button -->
+<a href="tel:+919876543210"
+  class="floating-button call w-12 h-12 rounded-full flex items-center justify-center shadow-lg">
+  <i class="ri-phone-fill ri-lg" style="color: rgb(27, 54, 93);"></i>
+</a>
+
+<!-- WhatsApp Button -->
+<a href="https://wa.me/919876543210"
+  class="floating-button whatsapp w-12 h-12 bg-green-500 rounded-full flex items-center justify-center shadow-lg">
+  <i class="ri-whatsapp-fill ri-lg text-white"></i>
+</a>
+
   <!-- Scripts -->
   <script id="mobile-menu-script">
     document.addEventListener("DOMContentLoaded", function () {
