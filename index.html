@@ -278,6 +278,37 @@
     }
 
 
+.shine-effect {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100px;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0) 70%
+  );
+  opacity: 0.6;
+  animation: shine 1.5s ease-out infinite;
+}
+
+@keyframes shine {
+  0% {
+    left: -100px;
+  }
+  60%,
+  100% {
+    left: 100%;
+  }
+}
+
+
+
+
+
 
     
   </style>
@@ -317,10 +348,12 @@
         <a href="services.html" class="text-gray-700 hover:text-primary font-medium py-2 transition-colors">Services</a>
         <a href="contect.html" class="text-gray-700 hover:text-primary font-medium py-2 transition-colors">Contact</a>
        <a href="contect.html">
-         <button
-          class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">
-          Get Protected Now
-        </button>
+       <button
+  class="relative bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition-transform duration-300 scale-100 hover:scale-105 border-[3px] border-white/30 hover:border-white/60 shadow-lg overflow-hidden">
+  <span class="relative z-10">Get Protected Now</span>
+  <span class="shine-effect"></span>
+</button>
+
        </a>
       </div>
     </div>
@@ -400,13 +433,29 @@ setInterval(() => {
     </div>
 
     <!-- City Buttons -->
-    <div class="city-buttons flex flex-wrap justify-center gap-3 mb-12">
-      <button class="city-btn px-4 py-2 text-white rounded bg-[rgb(27,54,93)] hover:bg-opacity-90 transition" data-city="Indore">Indore</button>
-      <button class="city-btn px-4 py-2 text-white rounded bg-[rgb(27,54,93)] hover:bg-opacity-90 transition" data-city="Bhopal">Bhopal</button>
-      <button class="city-btn px-4 py-2 text-white rounded bg-[rgb(27,54,93)] hover:bg-opacity-90 transition" data-city="Ujjain">Ujjain</button>
-      <button class="city-btn px-4 py-2 text-white rounded bg-[rgb(27,54,93)] hover:bg-opacity-90 transition" data-city="Gwalior">Gwalior</button>
-      <button class="city-btn px-4 py-2 text-white rounded bg-[rgb(27,54,93)] hover:bg-opacity-90 transition" data-city="Jabalpur">Jabalpur</button>
-    </div>
+  <div class="city-buttons flex flex-wrap justify-center gap-3 mb-12">
+  <button class="city-btn relative px-5 py-2 rounded-full font-bold text-white border-[3px] border-white/30 bg-[rgb(27,54,93)] shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:border-white/60">
+    <span class="relative z-10">Indore</span>
+    <span class="shine-effect"></span>
+  </button>
+  <button class="city-btn relative px-5 py-2 rounded-full font-bold text-white border-[3px] border-white/30 bg-[rgb(27,54,93)] shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:border-white/60">
+    <span class="relative z-10">Bhopal</span>
+    <span class="shine-effect"></span>
+  </button>
+  <button class="city-btn relative px-5 py-2 rounded-full font-bold text-white border-[3px] border-white/30 bg-[rgb(27,54,93)] shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:border-white/60">
+    <span class="relative z-10">Ujjain</span>
+    <span class="shine-effect"></span>
+  </button>
+  <button class="city-btn relative px-5 py-2 rounded-full font-bold text-white border-[3px] border-white/30 bg-[rgb(27,54,93)] shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:border-white/60">
+    <span class="relative z-10">Gwalior</span>
+    <span class="shine-effect"></span>
+  </button>
+  <button class="city-btn relative px-5 py-2 rounded-full font-bold text-white border-[3px] border-white/30 bg-[rgb(27,54,93)] shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:border-white/60">
+    <span class="relative z-10">Jabalpur</span>
+    <span class="shine-effect"></span>
+  </button>
+</div>
+
 
     <!-- Content Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
@@ -852,40 +901,41 @@ setInterval(() => {
   <div class="space-y-10 max-w-4xl mx-auto">
     <!-- Progress Template -->
     <div class="progress-container">
-      <h2 class="text-xl font-semibold text-blue-900 mb-2">Client Satisfaction</h2>
-      <div class="w-full bg-blue-100 rounded h-8 overflow-hidden">
-        <div class="progress-bar bg-[#3d6c8e] h-full flex items-center justify-end text-white text-sm pr-3" data-value="100" style="width: 0%;">
-          <span class="percent">0%</span>
-        </div>
-      </div>
+  <h2 class="text-xl font-semibold text-blue-900 mb-2">Client Satisfaction</h2>
+  <div class="w-full bg-blue-100 rounded h-8 overflow-hidden">
+    <div class="progress-bar h-full flex items-center justify-end text-white text-sm pr-3" data-value="100" style="width: 0%; background-color: rgb(27, 54, 93);">
+      <span class="percent">0%</span>
     </div>
+  </div>
+</div>
 
-    <div class="progress-container">
-      <h2 class="text-xl font-semibold text-blue-900 mb-2">Site Deployment</h2>
-      <div class="w-full bg-blue-100 rounded h-8 overflow-hidden">
-        <div class="progress-bar bg-[#3d6c8e] h-full flex items-center justify-end text-white text-sm pr-3" data-value="99" style="width: 0%;">
-          <span class="percent">0%</span>
-        </div>
-      </div>
+<div class="progress-container">
+  <h2 class="text-xl font-semibold text-blue-900 mb-2">Site Deployment</h2>
+  <div class="w-full bg-blue-100 rounded h-8 overflow-hidden">
+    <div class="progress-bar h-full flex items-center justify-end text-white text-sm pr-3" data-value="99" style="width: 0%; background-color: rgb(27, 54, 93);">
+      <span class="percent">0%</span>
     </div>
+  </div>
+</div>
 
-    <div class="progress-container">
-      <h2 class="text-xl font-semibold text-blue-900 mb-2">Customer Support</h2>
-      <div class="w-full bg-blue-100 rounded h-8 overflow-hidden">
-        <div class="progress-bar bg-[#3d6c8e] h-full flex items-center justify-end text-white text-sm pr-3" data-value="98" style="width: 0%;">
-          <span class="percent">0%</span>
-        </div>
-      </div>
+<div class="progress-container">
+  <h2 class="text-xl font-semibold text-blue-900 mb-2">Customer Support</h2>
+  <div class="w-full bg-blue-100 rounded h-8 overflow-hidden">
+    <div class="progress-bar h-full flex items-center justify-end text-white text-sm pr-3" data-value="98" style="width: 0%; background-color: rgb(27, 54, 93);">
+      <span class="percent">0%</span>
     </div>
+  </div>
+</div>
 
-    <div class="progress-container">
-      <h2 class="text-xl font-semibold text-blue-900 mb-2">Training Quality</h2>
-      <div class="w-full bg-blue-100 rounded h-8 overflow-hidden">
-        <div class="progress-bar bg-[#3d6c8e] h-full flex items-center justify-end text-white text-sm pr-3" data-value="97" style="width: 0%;">
-          <span class="percent">0%</span>
-        </div>
-      </div>
+<div class="progress-container">
+  <h2 class="text-xl font-semibold text-blue-900 mb-2">Training Quality</h2>
+  <div class="w-full bg-blue-100 rounded h-8 overflow-hidden">
+    <div class="progress-bar h-full flex items-center justify-end text-white text-sm pr-3" data-value="97" style="width: 0%; background-color: rgb(27, 54, 93);">
+      <span class="percent">0%</span>
     </div>
+  </div>
+</div>
+
   </div>
 
   <script>
