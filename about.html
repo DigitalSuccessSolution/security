@@ -323,456 +323,723 @@
     </div>
   </header>
 
-<!-- About Hero Section -->
-<section
-  class="w-full h-[70vh] md:h-[80vh] flex items-center justify-center relative bg-cover bg-center"
-  style="background-image: url('images/about-hero.png');"
->
-  <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+<!-- herosection start -->
 
-  <div class="relative z-10 text-center px-4">
-    <h1 class="text-white text-3xl md:text-5xl font-bold mb-4">About Us</h1>
-    <p class="text-white text-base md:text-lg max-w-xl mx-auto">
-      Learn more about our mission, our values, and the professional team behind our services.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Overlapping Section</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  
+  
+ 
+</head>
+<body>
+
+  
+ <!-- Hero Section -->
+<section class="hero-section">
+  <div class="hero-text">
+    <h1>Safeguarding what matters most — your people,<br>
+      your property, your peace of mind.
+    </h1>
+    <p>
+      Trusted protection, driven by experience and technology.
     </p>
   </div>
 </section>
 
+<!-- Overlapping Image + Text Section -->
+<section class="content-section">
+  <div class="image-box">
+    <img src="/images/contect-hero.png" alt="Overlap Image">
+  </div>
+  <div class="text-box">
+    <p>
+      <strong>Rudra Group Security Pvt. Ltd. (RGSPL)</strong> is one of the leading security service providers in India. With over 15 years of experience and a highly trained staff, RGSPL was founded in 2006 and is among the first security agencies in India to be awarded the ISO 9001:2015 certification.
+      <br><br>
+      We offer security solutions for Event Management, Retail Management, Electronic Surveillance, K9 Squads, Cash Vans, and more. Our expert team is equipped to handle all your security needs with professionalism and efficiency.
+      <br><br>
+      Our team of qualified security professionals is committed to delivering top-tier security services, ensuring peace of mind and industry-leading standards.
+    </p>
+  </div>
+</section>
 
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-<!-- About Section -->
-<section id="about" class="py-20 bg-white">
-  <div class="container mx-auto px-4">
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #000;
+    color: #fff;
+  }
 
-    <!-- Heading -->
-    <div class="text-center mb-16" data-aos="fade-down" data-aos-duration="1000">
-      <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">About Ronak Rudra Security</h2>
-      <div class="w-24 h-1 bg-secondary mx-auto mb-6"></div>
-      <p class="text-gray-600 max-w-3xl mx-auto text-justify">
-        Dedicated to providing exceptional security and manpower solutions since 2010, with a focus on
-        professionalism, reliability, and customer satisfaction.
+  /* Hero Section */
+  .hero-section {
+    background: url('/images/about-hero.png') no-repeat center/cover;
+    padding: 100px 50px;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-text {
+    max-width: 700px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px 30px;
+    border-radius: 8px;
+  }
+
+  .hero-text h1 {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 15px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* Content Section */
+  .content-section {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fefaf7;
+    padding: 80px 50px 60px;
+    position: relative;
+    color: #000;
+  }
+
+  .image-box {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    margin-top: -160px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .image-box img {
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+  }
+
+  .text-box {
+    flex: 1;
+    min-width: 300px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    background-color: #fefaf7;
+  }
+
+  .text-box p {
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .hero-section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .hero-text {
+      padding: 15px 20px;
+    }
+
+    .hero-text h1 {
+      font-size: 28px;
+      line-height: 1.4;
+    }
+
+    .hero-text p {
+      font-size: 14px;
+    }
+
+    .content-section {
+      flex-direction: column;
+      padding: 40px 20px;
+    }
+
+    .image-box {
+      margin-top: -80px;
+      padding: 0;
+    }
+
+    .text-box {
+      padding: 20px 10px;
+    }
+
+    .text-box p {
+      font-size: 14px;
+      padding: 0 5px;
+    }
+  }
+</style>
+
+</body>
+</html>
+
+<!-- hero section end -->
+
+<!-- Thoughtful Self-Care Section Start -->
+<section style="width: 100%; padding: 60px 20px; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; color: #000; background-color: #f9fafb;">
+  
+  <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 40px 0;">
+
+  <!-- Mission Section -->
+  <div style="text-align: center; margin-bottom: 60px;">
+    <div style="font-size: 12px; letter-spacing: 2px; color: #888; text-transform: uppercase; margin-bottom: 10px;">
+      Our Mission
+    </div>
+    <p style="max-width: 700px; margin: 0 auto; font-size: 15px; color: #444; text-align: justify; line-height: 1.8;">
+      As the leading security service provider in India. our aim is to provide the best security service to our customers. Our main focus is on clear and concise communication which enables us to protect your assets and loved ones round the clock. We combine the on-field experience of our seasoned experts and advanced technology to strive towards perfection across all security aspects. Our ethics, morals, time commitment and afford ability makes us stand out from the crowd.
+    </p>
+  </div>
+
+  <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 40px 0;">
+
+  <!-- Managing Director -->
+  <div class="flex-responsive" style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px; margin-bottom: 60px;">
+    <div class="image-container" style="flex: 1; min-width: 280px;">
+      <img src="images/about-image.jpg" alt="About Section Image" style="width: 100%; border-radius: 10px;">
+    </div>
+    <div style="flex: 2; max-width: 600px;" class="text-content">
+      <div style="font-size: 14px; text-transform: uppercase; color: black; margin-bottom: 8px; font-weight: bold;">
+        Mr. JEEVAN SINGH (Managing Director)
+      </div>
+      <p style="font-size: 15px; color: #444; text-align: justify; line-height: 1.8;">
+        A pioneer in the field of security have a vast experience of many years. He launched his own Security Service Company in & extended his wings by motive of sky is the limit. He has also diversified into Real Estate, Hotels and leasing Business. He has with his vision, dexterily, ingrained business acumen and professionalism, managed and developed the security to the top level. The company today has a national presence with 22 branches all over India with a guard forceofover 6000 personnel.
       </p>
-    </div>
-
-    <!-- City Buttons -->
-    <div class="city-buttons flex flex-wrap justify-center gap-3 mb-12">
-      <button class="city-btn relative px-5 py-2 rounded-full font-bold text-white border-[3px] border-white/30 bg-[rgb(27,54,93)] shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:border-white/60" data-city="Indore">
-        <span class="relative z-10">Indore</span>
-        <span class="shine-effect"></span>
-      </button>
-      <button class="city-btn relative px-5 py-2 rounded-full font-bold text-white border-[3px] border-white/30 bg-[rgb(27,54,93)] shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:border-white/60" data-city="Bhopal">
-        <span class="relative z-10">Bhopal</span>
-        <span class="shine-effect"></span>
-      </button>
-      <button class="city-btn relative px-5 py-2 rounded-full font-bold text-white border-[3px] border-white/30 bg-[rgb(27,54,93)] shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:border-white/60" data-city="Ujjain">
-        <span class="relative z-10">Ujjain</span>
-        <span class="shine-effect"></span>
-      </button>
-      <button class="city-btn relative px-5 py-2 rounded-full font-bold text-white border-[3px] border-white/30 bg-[rgb(27,54,93)] shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:border-white/60" data-city="Gwalior">
-        <span class="relative z-10">Gwalior</span>
-        <span class="shine-effect"></span>
-      </button>
-      <button class="city-btn relative px-5 py-2 rounded-full font-bold text-white border-[3px] border-white/30 bg-[rgb(27,54,93)] shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:border-white/60" data-city="Jabalpur">
-        <span class="relative z-10">Jabalpur</span>
-        <span class="shine-effect"></span>
-      </button>
-    </div>
-
-    <!-- Content Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start" style="overflow-x: hidden !important;"> 
-
-      <!-- Interactive Map -->
-      <div data-aos="fade-right" data-aos-duration="1000">
-        <div id="map" class="w-full h-[400px] rounded-lg shadow-xl"></div>
-      </div>
-
-      <!-- Text Content -->
-      <div data-aos="fade-left" data-aos-duration="1000" style="overflow-x: hidden !important;">
-        <!-- Our Mission -->
-        <h3 class="text-2xl font-bold text-primary mb-4">Our Mission</h3>
-        <p class="text-gray-700 mb-6 text-justify">
-          To provide unparalleled security and manpower services that exceed client expectations through
-          professionalism, integrity, and continuous improvement.
-        </p>
-
-        <!-- Why Trust Us -->
-        <h3 class="text-2xl font-bold text-primary mb-4">Why Trust Us</h3>
-        <ul class="space-y-3 mb-8">
-          <li class="flex items-start">
-            <div class="w-6 h-6 flex items-center justify-center text-[rgb(255,215,0)] mr-2 mt-1">
-              <i class="ri-check-line ri-lg"></i>
-            </div>
-            <span class="text-gray-700">Over 15 years of industry experience</span>
-          </li>
-          <li class="flex items-start">
-            <div class="w-6 h-6 flex items-center justify-center text-[rgb(255,215,0)] mr-2 mt-1">
-              <i class="ri-check-line ri-lg"></i>
-            </div>
-            <span class="text-gray-700">Professionally trained and vetted security personnel</span>
-          </li>
-          <li class="flex items-start">
-            <div class="w-6 h-6 flex items-center justify-center text-[rgb(255,215,0)] mr-2 mt-1">
-              <i class="ri-check-line ri-lg"></i>
-            </div>
-            <span class="text-gray-700">Customized security solutions for every client</span>
-          </li>
-          <li class="flex items-start">
-            <div class="w-6 h-6 flex items-center justify-center text-[rgb(255,215,0)] mr-2 mt-1">
-              <i class="ri-check-line ri-lg"></i>
-            </div>
-            <span class="text-gray-700">24/7 monitoring and rapid response capabilities</span>
-          </li>
-        </ul>
-
-        <!-- Badges -->
-        <div class="flex flex-wrap gap-4 justify-center md:justify-start">
-          <img src="Gemini_Generated_Image_3ra1lq3ra1lq3ra1.jpeg" alt="Security Certification" class="h-16 w-auto" />
-          <img src="Gemini_Generated_Image_3ra1lq3ra1lq3ra1.jpeg" alt="Industry Association" class="h-16 w-auto" />
-          <img src="Gemini_Generated_Image_3ra1lq3ra1lq3ra1.jpeg" alt="Excellence Award" class="h-16 w-auto" />
-        </div>
-      </div>
     </div>
   </div>
 
-  <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+  <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 40px 0;">
 
-  <!-- Leaflet JS -->
-  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <!-- Executive Director -->
+  <div class="flex-responsive" style="display: flex; flex-wrap: wrap-reverse; align-items: center; gap: 40px; margin-bottom: 60px;">
+    <div style="flex: 2; max-width: 600px;" class="text-content">
+      <div style="font-size: 14px; text-transform: uppercase; color: black; margin-bottom: 8px; font-weight: bold;">
+        Mr. RANJEET SINGH CHANDRAWAT (Executive Director)
+      </div>
+      <p style="font-size: 15px; color: #444; text-align: justify; line-height: 1.8;">
+        A Management graduate with professional experience spread across admin/material management / business development/ client servicing domain in industries such as textile, FMCG, steel and service industry. During which he was instrumental in establishing business network and developing training programmes for specified category of manpower. He bas organized management development programmes for senior management in various reputed organizations.
+      </p>
+    </div>
+    <div class="image-container" style="flex: 1; min-width: 280px;">
+      <img class="image-mobile" src="images/about.jpg" alt="Executive Director Image" style="width: 100%; border-radius: 10px;">
+    </div>
+  </div>
 
-  <!-- Map Script -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const map = L.map("map").setView([22.9734, 78.6569], 5); // India
+  <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 40px 0;">
 
-      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>',
-      }).addTo(map);
+  <!-- General Manager -->
+  <div class="flex-responsive" style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px; margin-bottom: 60px;">
+    <div class="image-container" style="flex: 1; min-width: 280px;">
+      <img src="images/about-image.jpg" alt="About Section Image" style="width: 100%; border-radius: 10px;">
+    </div>
+    <div style="flex: 2; max-width: 600px;" class="text-content">
+      <div style="font-size: 14px; text-transform: uppercase; color: black; margin-bottom: 8px; font-weight: bold;">
+        Mr. DEEPNARAYAN DWIVEDI (General Manager)
+      </div>
+      <p style="font-size: 15px; color: #444; text-align: justify; line-height: 1.8;">
+        An officer from Combat Arm of Indian Army. Two & a half decades in Army besides four years in National Defense Academy and Indian Military Academy. Long Innings in insurgent areas and tenure with National Security guard, the premier security set-up in India. Successfully completed security course with Military Intelligence and Security College and also done Industrial Security Course under the aegis of DGR. Handled VIP Security at National & International level. Had long association with homeland security of US Homeland Security Strategies GB regarding high level security system. Expert in security audit and analysis. Lately have been coordinating with 18 stand alone training venues of common wealth Games where Security is of utmost priority.
+      </p>
+    </div>
+  </div>
 
-      const cities = [
-        { name: "Indore", coords: [22.7196, 75.8577] },
-        { name: "Bhopal", coords: [23.2599, 77.4126] },
-        { name: "Ujjain", coords: [23.1793, 75.7849] },
-        { name: "Gwalior", coords: [26.2183, 78.1828] },
-        { name: "Jabalpur", coords: [23.1815, 79.9864] },
-      ];
+  <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 40px 0;">
+</section>
 
-      const markers = {};
-      cities.forEach((city) => {
-        const marker = L.marker(city.coords)
-          .addTo(map)
-          .bindPopup(`<b>${city.name}</b><br>Security Services Active`);
-        markers[city.name] = marker;
-      });
+<!-- Responsive Styling -->
+<style>
+  @media (max-width: 768px) {
+    .flex-responsive {
+      flex-direction: column !important;
+      text-align: center;
+    }
 
-      document.querySelectorAll(".city-btn").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          const cityName = btn.getAttribute("data-city");
-          const marker = markers[cityName];
-          if (marker) {
-            map.setView(marker.getLatLng(), 13, { animate: true });
-            marker.openPopup();
-          }
-        });
-      });
+    .text-content {
+      padding: 0 10px;
+    }
 
-      setTimeout(() => {
-        map.invalidateSize();
-      }, 500);
-    });
-  </script>
+    .image-container {
+      padding-left: 0 !important;
+    }
 
-  <!-- Custom Styling -->
-  <style>
-    #map {
+    img {
+      padding-left: 0 !important;
+    }
+  }
+</style>
+
+
+
+<!-- ourclient start -->
+ <!-- Clients Section with Heading, Slider and Stats -->
+<div style="background-color: #1b365d; padding: 40px 0;">
+
+  <!-- Section Heading -->
+  <div style="text-align: center;">
+    <h2 style="font-size: 36px; font-weight: 600; margin-bottom: 30px; font-family: 'Georgia', serif; display: inline-block; letter-spacing: 0.6px; color: black;">
+      Our Clients
+    </h2>
+  </div>
+
+  <!-- Marquee Wrapper -->
+  <div class="client-marquee">
+    <div class="marquee-track">
+      <!-- Add client logos -->
+      <img src="logo cllient/adani.png" alt="Client 1" />
+      <img src="logo cllient/AGRAWAL 420.png" alt="Client 2" />
+      <img src="logo cllient/amitex.png" alt="Client 3" />
+      <img src="logo cllient/ANAND SAGAR.jpg" alt="Client 4" />
+      <img src="logo cllient/APOLO.jpg" alt="Client 5" />
+      <img src="logo cllient/ARIHANT.png" alt="Client 6" />
+      <img src="logo cllient/arpan hospital.jpg" alt="Client 7" />
+      <img src="logo cllient/AVM.jpg" alt="Client 8" />
+      <img src="logo cllient/BHAGWATI.jpg" alt="Client 9" />
+      <img src="logo cllient/Click-Bg-1536x864.png" alt="Client 10" />
+      <img src="logo cllient/D&H.jpg" alt="Client 11" />
+      <img src="logo cllient/dimart pitampur.jpg" alt="Client 12" />
+      <img src="logo cllient/dmart.jpg" alt="Client 13" />
+      <img src="logo cllient/FLEXI CAPS.jpg" alt="Client 14" />
+      <img src="logo cllient/gokul das.jpg" alt="Client 15" />
+      <img src="logo cllient/GOLDEN LEAVES.png" alt="Client 16" />
+      <img src="logo cllient/gurjar.png" alt="Client 17" />
+      <img src="logo cllient/HOLY FAMILY.jpg" alt="Client 18" />
+      <img src="logo cllient/INDORE.jpg" alt="Client 19" />
+      <img src="logo cllient/KACH.jpg" alt="Client 20" />
+      <img src="logo cllient/KT HOTEK.jpg" alt="Client 21" />
+      <img src="logo cllient/LAXMI NARAYAN COLLAGE.png" alt="Client 22" />
+      <img src="logo cllient/mahindra.png" alt="23" />
+      <img src="logo cllient/MAPLE.jpg" alt="24" />
+      <img src="logo cllient/MARUTI SUZUKI.png" alt="25" />
+      <img src="logo cllient/MEGA STORE.jpg" alt="26" />
+      <img src="logo cllient/MODARN.jpg" alt="27" />
+      <img src="logo cllient/mono.png" alt="28" />
+      <img src="logo cllient/MRC.jpg" alt="29" />
+      <img src="logo cllient/NCC.jpg" alt="Client 30" />
+      <img src="logo cllient/NOVEL HOSPITAL.png" alt="Client 31" />
+      <img src="logo cllient/OMEGA.jpg" alt="Client 32" />
+      <img src="logo cllient/PANJON.png" alt="Client 33" />
+      <img src="logo cllient/projGal-1.jpeg" alt="Client 34" />
+      <img src="logo cllient/RANEKA.jpg" alt="Client 35" />
+      <img src="logo cllient/RC.png" alt="Client 36" />
+      <img src="logo cllient/ROYAL ENFIELD.png" alt="Client 37" />
+      <img src="logo cllient/SAGA.jpg" alt="Client 38" />
+      <img src="logo cllient/SANKAR NUTRICON.jpg" alt="Client 39" />
+      <img src="logo cllient/sendhawa.jpg" alt="Client 40" />
+      <img src="logo cllient/SKY LINE.jpg" alt="Client 41" />
+      <img src="logo cllient/SNEHA SWEETS.png" alt="Client 42" />
+      <img src="logo cllient/SNG.jpg" alt="Client 43" />
+      <img src="logo cllient/swami - Copy.png" alt="Client 44" />
+      <img src="logo cllient/SREE RAM SCHOOL.jpg" alt="Client 45" />
+      <img src="logo cllient/swastik bun.jpg" alt="Client 46" />
+      <img src="logo cllient/TOLL PLAZA.jpg" alt="Client 47" />
+      <img src="logo cllient/TVS.png" alt="Client 48" />
+      <img src="logo cllient/TWC.webp" alt="Client 50" />
+      <img src="logo cllient/UGC.jpg" alt="Client 51" />
+      <img src="logo cllient/VAKPATI.jpg" alt="Client 52" />
+      <img src="logo cllient/vantage.jpg" alt="Client 53" />
+      <img src="logo cllient/VARDHMAN.png" alt="Client 54" />
+      <img src="logo cllient/WATER LILY.jpg" alt="Client 55" />
+      <!-- Repeat for continuous scroll -->
+      <img src="logo cllient/adani.png" alt="Client 1" />
+      <img src="logo cllient/AGRAWAL 420.png" alt="Client 2" />
+      <img src="logo cllient/amitex.png" alt="Client 3" />
+    </div>
+  </div>
+
+  <!-- Stats Section -->
+  <div class="stats-wrapper">
+    <div class="stat-box">
+      <h4>Experiences</h4>
+      <p><span class="count" data-count="20">0</span>+</p>
+    </div>
+    <div class="stat-box">
+      <h4>Corporate Events</h4>
+      <p><span class="count" data-count="300">0</span>+</p>
+    </div>
+    <div class="stat-box">
+      <h4>Wedding</h4>
+      <p><span class="count" data-count="400">0</span>+</p>
+    </div>
+    <div class="stat-box">
+      <h4>Musical Concerts</h4>
+      <p><span class="count" data-count="200">0</span>+</p>
+    </div>
+  </div>
+</div>
+
+<!-- Styles -->
+<style>
+  /* Marquee */
+  .client-marquee {
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+    box-sizing: border-box;
+    padding: 10px 0;
+  }
+
+  .marquee-track {
+    display: inline-flex;
+    animation: scroll-left 60s linear infinite;
+    gap: 50px;
+    align-items: center;
+  }
+
+  .marquee-track img {
+    height: 70px;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.95;
+    transition: transform 0.3s ease;
+    filter: none;
+  }
+
+  .marquee-track img:hover {
+    transform: scale(1.1);
+  }
+
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* Stats Section */
+  .stats-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 50px 20px 20px;
+    text-align: center;
+  }
+
+  .stat-box {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 30px 25px;
+    border-radius: 8px;
+    width: 220px;
+    color: #222;
+    font-family: 'Georgia', serif;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .stat-box h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+    text-transform: uppercase;
+  }
+
+  .stat-box p {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+  }
+
+  .stat-box:hover {
+    transform: translateY(-5px);
+  }
+
+  @media (max-width: 768px) {
+    .stat-box {
+      width: 45%;
+    }
+
+    .marquee-track img {
+      height: 50px;
+    }
+
+    .marquee-track {
+      gap: 30px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .stat-box {
       width: 100%;
-      height: 400px;
+    }
+  }
+</style>
+
+<!-- Count Animation Script (Triggers every scroll into view) -->
+<script>
+  function animateCounts() {
+    const counters = document.querySelectorAll('.count');
+    counters.forEach(counter => {
+      const target = +counter.getAttribute('data-count');
+      let count = 0;
+      const increment = Math.ceil(target / 100);
+      const speed = 15;
+
+      const update = () => {
+        if (count < target) {
+          count += increment;
+          counter.innerText = count > target ? target : count;
+          setTimeout(update, speed);
+        } else {
+          counter.innerText = target;
+        }
+      };
+      update();
+    });
+  }
+
+  function isInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return rect.top < window.innerHeight && rect.bottom > 0;
+  }
+
+  window.addEventListener('scroll', () => {
+    const statSection = document.querySelector('.stats-wrapper');
+    if (isInViewport(statSection)) {
+      animateCounts();
+    }
+  });
+</script>
+
+
+ <!-- ourclientend -->
+
+
+
+
+
+
+<style>
+  .newsletter-section {
+    background-color: #fff;
+    padding: 60px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .newsletter-text {
+    flex: 1 1 300px;
+    margin-bottom: 20px;
+  }
+
+  .newsletter-text h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+  }
+
+  .newsletter-text p {
+    font-size: 16px;
+    font-weight: 600;
+    color: #999;
+    margin-top: 10px;
+  }
+
+  .newsletter-form {
+    flex: 1 1 300px;
+    display: flex;
+    max-width: 600px;
+    width: 100%;
+    border: 1px solid #999;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+
+  .newsletter-form input[type="email"] {
+    flex: 1;
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-radius: 30px 0 0 30px;
+  }
+
+  .newsletter-form button {
+    padding: 0 25px;
+    background-color: transparent;
+    border: none;
+    color: #333;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-left: 1px solid #ccc;
+    border-radius: 0 30px 30px 0;
+  }
+
+  @media (max-width: 768px) {
+    .newsletter-section {
+      flex-direction: column;
+      align-items: flex-start;
     }
 
-    @media (max-width: 768px) {
-      #map {
-        height: 300px;
-      }
+    .newsletter-form {
+      border-radius: 30px;
+      flex-direction: column;
+      overflow: visible;
+      border: none;
+      width: 100%;
     }
 
-    .shine-effect {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -100px;
-      width: 100px;
-      height: 100%;
-      background-image: linear-gradient(
-        120deg,
-        rgba(255, 255, 255, 0) 30%,
-        rgba(255, 255, 255, 0.8),
-        rgba(255, 255, 255, 0) 70%
-      );
-      opacity: 0.6;
-      animation: shine 1.5s ease-out infinite;
+    .newsletter-form input[type="email"],
+    .newsletter-form button {
+      width: 100%;
+      border-radius: 30px;
+      border: 1px solid #ccc;
+      margin-top: 10px;
     }
 
-    @keyframes shine {
-      0% {
-        left: -100px;
-      }
-      60%, 100% {
-        left: 100%;
-      }
+    .newsletter-form button {
+      border-left: none;
     }
-  </style>
+  }
+</style>
+
+
+
+
+
+<section class="newsletter-section">
+  <div class="newsletter-text">
+    <h2>Subscribe to our Newsletter</h2>
+    <p>Be the first to know about new products and exclusive offers.</p>
+  </div>
+  <form class="newsletter-form">
+    <input type="email" placeholder="Email" required>
+    <button type="submit">Subscribe</button>
+  </form>
 </section>
 
 
 
-  <!-- Contact Section -->
-<section id="contact" class="py-20 bg-gray-50">
-  <div class="container mx-auto px-4">
-    <div class="text-center mb-16">
-      <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">
-        Contact Us
-      </h2>
-      <div class="w-24 h-1 bg-secondary mx-auto mb-6"></div>
-      <p class="text-gray-600 max-w-3xl mx-auto text-justify [text-align:justify] [hyphens:auto]">
-        Get in touch with our team to discuss your security and manpower
-        requirements. We're here to help you find the perfect solution.
+
+
+
+
+
+
+
+  <!-- footer -->
+   <!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Footer Section Start -->
+<footer style="background-color: #000; color: #fff; padding: 60px 40px 30px; font-family: 'Segoe UI', sans-serif;">
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px;">
+
+    <!-- Column 1: Logo & About -->
+    <div style="flex: 1 1 220px; max-width: 300px;">
+      <div style="display: flex; align-items: center; margin-bottom: 15px;">
+        <div style="border: 1px solid #fff; padding: 4px 10px; font-weight: bold; margin-right: 10px;">R</div>
+        <div style="font-size: 18px; letter-spacing: 5px;">onakrudra</div>
+      </div>
+      <p style="font-size: 14px; line-height: 1.8; color: #ccc;">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt. Ut
+      </p>
+      <div style="margin-top: 20px; font-size: 16px; color: #fff;">
+        <i class="fab fa-facebook-f" style="margin-right: 15px;"></i>
+        <i class="fab fa-x-twitter" style="margin-right: 15px;"></i>
+        <i class="fab fa-instagram" style="margin-right: 15px;"></i>
+        <i class="fab fa-linkedin-in"></i>
+      </div>
+    </div>
+
+    <!-- Column 2: Contact -->
+    <div style="flex: 1 1 200px;">
+      <h4 style="margin-bottom: 15px; font-weight: bold;">CONTACT</h4>
+      <p style="color: #ccc; font-size: 14px; line-height: 1.6;">
+        Reg . off 344, New Vaibhav Laxmi Nagar<br>
+        Opp . Velocity , Indore (M.P)
+      </p>
+      <br>
+      <p style="color: #ccc; font-size: 14px;">
+        acc.rudragroup@gmail.com
+        <br>
+        +91 9111398999 <br>
+        +91 8435999299 <br>
+        +91 9111527999
       </p>
     </div>
-    <div class="flex flex-col lg:flex-row gap-10">
-      <!-- Contact Form -->
-      <div class="lg:w-1/2 bg-white p-8 rounded-lg shadow-md">
-        <h3 class="text-2xl font-bold text-primary mb-6">
-          Send Us a Message
-        </h3>
-        <form id="contact-form">
-          <div class="mb-4">
-            <label for="name" class="block text-gray-700 mb-2">Full Name</label>
-            <input type="text" id="name"
-              class="w-full px-4 py-2 rounded border-none bg-gray-100 focus:bg-white focus:ring-2 focus:ring-primary"
-              placeholder="John Smith" required />
-          </div>
-          <div class="mb-4">
-            <label for="email" class="block text-gray-700 mb-2">Email Address</label>
-            <input type="email" id="email"
-              class="w-full px-4 py-2 rounded border-none bg-gray-100 focus:bg-white focus:ring-2 focus:ring-primary"
-              placeholder="john@example.com" required />
-          </div>
-          <div class="mb-4">
-            <label for="phone" class="block text-gray-700 mb-2">Phone Number</label>
-            <input type="tel" id="phone"
-              class="w-full px-4 py-2 rounded border-none bg-gray-100 focus:bg-white focus:ring-2 focus:ring-primary"
-              placeholder="+91 98765 43210" required />
-          </div>
-          <div class="mb-4">
-            <label for="service" class="block text-gray-700 mb-2">Service Interest</label>
-            <div class="relative">
-              <select id="service"
-                class="w-full px-4 py-2 rounded appearance-none border-none bg-gray-100 focus:bg-white focus:ring-2 focus:ring-primary pr-8"
-                required>
-                <option value="" disabled selected>Select a service</option>
-                <option value="security-guards">Security Guards</option>
-                <option value="armed-security">Armed Security</option>
-                <option value="event-security">Event Security</option>
-                <option value="escort-services">Escort Services</option>
-                <option value="cash-van">Cash Van Security</option>
-                <option value="industrial-manpower">Industrial Manpower</option>
-                <option value="hotel-staff">Hotel Staff</option>
-                <option value="other">Other</option>
-              </select>
-              <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                <i class="ri-arrow-down-s-line text-gray-500"></i>
-              </div>
-            </div>
-          </div>
-          <div class="mb-6">
-            <label for="message" class="block text-gray-700 mb-2">Message</label>
-            <textarea id="message" rows="5"
-              class="w-full px-4 py-2 rounded border-none bg-gray-100 focus:bg-white focus:ring-2 focus:ring-primary"
-              placeholder="Tell us about your requirements..." required></textarea>
-          </div>
-         <button type="submit"
-  class="text-white px-8 py-3 font-bold hover:bg-opacity-90 transition-colors whitespace-nowrap w-full rounded"
-  style="background-color: rgb(27, 54, 93);">
-  Send Message
-</button>
 
-        </form>
-      </div>
-      <!-- Contact Information -->
-      <div class="lg:w-1/2">
-        <div class="bg-white p-8 rounded-lg shadow-md mb-8">
-          <h3 class="text-2xl font-bold text-primary mb-6">
-            Contact Information
-          </h3>
-          <div class="space-y-6">
-            <div class="flex items-start">
-              <div
-                class="w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0"
-                style="background-color: rgb(27, 54, 93);">
-                <i class="ri-map-pin-line ri-lg text-white"></i>
-              </div>
-              <div>
-                <h4 class="font-bold text-gray-800 mb-1 text-justify [text-align:justify] [hyphens:auto]">Office Address</h4>
-                <p class="text-gray-600 text-justify [text-align:justify] [hyphens:auto]">
-                  123 Security Complex, MG Road Bangalore, Karnataka
-                  560001 India
-                </p>
-              </div>
-            </div>
-            <div class="flex items-start">
-              <div
-                class="w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0"
-                style="background-color: rgb(27, 54, 93);">
-                <i class="ri-phone-line ri-lg text-white"></i>
-              </div>
-              <div>
-                <h4 class="font-bold text-gray-800 mb-1">Phone Numbers</h4>
-                <p class="text-gray-600 text-justify [text-align:justify] [hyphens:auto]">
-                  Main Office: +91 80 2345 6789 24/7 Helpline: +91
-                  98765 43210
-                </p>
-              </div>
-            </div>
-            <div class="flex items-start">
-              <div
-                class="w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0"
-                style="background-color: rgb(27, 54, 93);">
-                <i class="ri-mail-line ri-lg text-white"></i>
-              </div>
-              <div>
-                <h4 class="font-bold text-gray-800 mb-1 text-justify [text-align:justify] [hyphens:auto]">Email Addresses</h4>
-                <p class="text-gray-600 text-justify [text-align:justify] [hyphens:auto]">
-                  General Inquiries:info@ronakrudra.com Support:
-                  support@ronakrudra.com
-                </p>
-              </div>
-            </div>
-            <div class="flex items-start">
-              <div
-                class="w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0"
-                style="background-color: rgb(27, 54, 93);">
-                <i class="ri-time-line ri-lg text-white"></i>
-              </div>
-              <div>
-                <h4 class="font-bold text-gray-800 mb-1">Working Hours</h4>
-                <p class="text-gray-600 text-justify [text-align:justify] [hyphens:auto]">
-                  Monday to Friday: 9:00 AM - 6:00 PM <br>Saturday: 9:00 AM
-                  - 1:00 PM <br>24/7 Emergency Support Available
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Map -->
-        <div class="bg-white p-8 rounded-lg shadow-md h-64 relative overflow-hidden">
-          <div
-            style="background-image: url('https://public.readdy.ai/gen_page/map_placeholder_1280x720.png'); background-position: center; background-size: cover; position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-          </div>
-        </div>
-      </div>
+    <!-- Column 3: Info -->
+    <div style="flex: 1 1 200px;">
+      <h4 style="margin-bottom: 15px; font-weight: bold;">INFO</h4>
+      <table style="font-size: 14px; color: #ccc;">
+        <tr>
+          <td style="padding: 4px 20px 4px 0;">Working Days</td>
+          <td>9AM - 9PM</td>
+        </tr>
+        <tr>
+          <td style="padding: 4px 20px 4px 0;">Saturday</td>
+          <td>10AM - 8PM</td>
+        </tr>
+        <tr>
+          <td style="padding: 4px 20px 4px 0;">Sunday</td>
+          <td>Closed</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Column 4: Map -->
+    <div style="flex: 1 1 200px;">
+      <h4 style="margin-bottom: 15px; font-weight: bold;">MAPS</h4>
+      <img src="images/map.png" alt="Map" style="max-width: 100%; height: auto;">
     </div>
   </div>
-</section>
 
- <!-- Footer -->
-<footer class="text-white py-12" style="background-color: rgb(27, 54, 93);">
-  <div class="container mx-auto px-4">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      
-      <!-- Company Info -->
-      <div>
-        <a href="#" class="text-3xl font-['Pacifico'] text-white mb-4 inline-block">logo</a>
-        <p class="text-gray-300 mb-6 text-justify [text-align:justify] [hyphens:auto]">
-          Your trusted partner in security and manpower solutions since
-          2010. Providing professional services across India.
-        </p>
-        <div class="flex space-x-4">
-          <a href="#" class="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center hover:bg-black hover:text-primary transition-colors">
-            <i class="ri-facebook-fill"></i>
-          </a>
-          <a href="#" class="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center hover:bg-black hover:text-primary transition-colors">
-            <i class="ri-twitter-x-fill"></i>
-          </a>
-          <a href="#" class="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center hover:bg-black hover:text-primary transition-colors">
-            <i class="ri-linkedin-fill"></i>
-          </a>
-          <a href="#" class="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center hover:bg-black hover:text-primary transition-colors">
-            <i class="ri-instagram-fill"></i>
-          </a>
-        </div>
-      </div>
-
-      <!-- Quick Links -->
-      <div>
-        <h3 class="text-xl font-bold mb-4">Quick Links</h3>
-        <ul class="space-y-2">
-          <li><a href="#home" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
-          <li><a href="#about" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
-          <li><a href="#services" class="text-gray-300 hover:text-white transition-colors">Our Services</a></li>
-          <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Careers</a></li>
-          <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Blog</a></li>
-          <li><a href="#contact" class="text-gray-300 hover:text-white transition-colors">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <!-- Our Services -->
-      <div>
-        <h3 class="text-xl font-bold mb-4">Our Services</h3>
-        <ul class="space-y-2">
-          <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Security Guards</a></li>
-          <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Armed Security</a></li>
-          <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Event Security</a></li>
-          <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Escort Services</a></li>
-          <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Industrial Manpower</a></li>
-          <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Hotel Staff</a></li>
-        </ul>
-      </div>
-
-      <!-- Contact -->
-      <div>
-        <h3 class="text-xl font-bold mb-4">Contact Us</h3>
-        <ul class="space-y-4">
-          <li class="flex items-start">
-            <div class="w-5 h-5 flex items-center justify-center mr-3 mt-1">
-              <i class="ri-map-pin-line"></i>
-            </div>
-            <span class="text-gray-300 text-justify [text-align:justify] [hyphens:auto]">
-              123 Security Complex, MG Road Bangalore, Karnataka 560001
-            </span>
-          </li>
-          <li class="flex items-start">
-            <div class="w-5 h-5 flex items-center justify-center mr-3 mt-1">
-              <i class="ri-phone-line"></i>
-            </div>
-            <span class="text-gray-300">+91 80 2345 6789<br />+91 98765 43210</span>
-          </li>
-          <li class="flex items-start">
-            <div class="w-5 h-5 flex items-center justify-center mr-3 mt-1">
-              <i class="ri-mail-line"></i>
-            </div>
-            <span class="text-gray-300">info@ronakrudra.com</span>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Bottom -->
-    <div class="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
-      <p class="text-gray-400 text-sm mb-4 md:mb-0 text-center md:text-left">
-        © 2025 Ronak Rudra Security & Management Services. All rights reserved.
-      </p>
-      <div class="flex items-center justify-center md:justify-end">
-        <span class="text-white font-bold mr-6">Safety. Security. Trust.</span>
-        <div class="flex space-x-4">
-          <i class="ri-visa-fill ri-lg text-gray-300"></i>
-          <i class="ri-mastercard-fill ri-lg text-gray-300"></i>
-          <i class="ri-paypal-fill ri-lg text-gray-300"></i>
-        </div>
-      </div>
-    </div>
+  <!-- Bottom Footer -->
+  <div style="text-align: center; color: #ccc; font-size: 13px; margin-top: 40px; border-top: 1px solid #222; padding-top: 20px;">
+    © 2018 Qode Interactive, All Rights Reserved
   </div>
 </footer>
+<!-- Footer Section End -->
 
+
+
+
+
+
+
+
+  
+
+ 
   <!-- Floating Buttons -->
 <style>
   .floating-button {
