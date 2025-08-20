@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+  <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ronak Rudra Security & Management Services</title>
@@ -402,175 +404,881 @@
 
 
   
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Security Solutions</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+    
+    body {
+      overflow-x: hidden;
+    }
+    
+    /* Hero Section */
+    #home {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      color: white;
+    }
+    
+    #hero-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      transition: all 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      transform: scale(1.05);
+      will-change: transform, opacity;
+    }
+    
+    #home::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(27,54,93,0.85) 0%, rgba(16,30,51,0.9) 100%);
+      z-index: 10;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 20;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 1.5rem;
+      text-align: center;
+    }
+    
+    .hero-text {
+      max-width: 1200px;
+      padding: 0 2rem;
+    }
+    
+    .hero-badge {
+      display: inline-block;
+      background: linear-gradient(90deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 50px;
+      padding: 0.5rem 1.25rem;
+      margin-bottom: 1.5rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      animation: fadeInDown 1s ease-out;
+    }
+    
+    h1 {
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.02em;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      animation: fadeInUp 0.8s ease-out 0.2s both;
+    }
+    
+    .hero-subtitle {
+      font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+      line-height: 1.6;
+      margin-bottom: 2.5rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      font-weight: 300;
+      opacity: 0.9;
+      animation: fadeInUp 0.8s ease-out 0.4s both;
+    }
+    
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      animation: fadeInUp 0.8s ease-out 0.6s both;
+    }
+    
+    .btn-primary {
+      background: linear-gradient(90deg, #1B365D 0%, #2A4B7C 100%);
+      color: white;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(27, 54, 93, 0.4);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: all 0.6s ease;
+    }
+    
+    .btn-primary:hover::before {
+      left: 100%;
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 7px 20px rgba(27, 54, 93, 0.6);
+    }
+    
+    .btn-secondary {
+      background: transparent;
+      color: white;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+    
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.5);
+      transform: translateY(-2px);
+    }
+    
+    .scroll-indicator {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 30;
+      animation: bounce 2s infinite;
+    }
+    
+    .scroll-indicator a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+    
+    .scroll-indicator i {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .indicators {
+      position: absolute;
+      right: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 25;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .indicator {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .indicator.active {
+      background: white;
+      transform: scale(1.3);
+    }
+    
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) translateX(-50%);
+      }
+      40% {
+        transform: translateY(-20px) translateX(-50%);
+      }
+      60% {
+        transform: translateY(-10px) translateX(-50%);
+      }
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .btn-primary, .btn-secondary {
+        width: 100%;
+        max-width: 300px;
+      }
+      
+      .indicators {
+        flex-direction: row;
+        bottom: 1rem;
+        top: auto;
+        right: 50%;
+        transform: translateX(50%);
+      }
+      
+      .hero-text {
+        padding: 0 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
   <!-- Hero Section -->
-<section id="home" class="relative w-full h-screen overflow-hidden text-white">
-  <div id="hero-bg" class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000"></div>
-  <div class="absolute inset-0 bg-black bg-opacity-60 z-10"></div>
-
-  <div class="relative z-20 h-full flex items-center justify-center px-6">
-    <div class="max-w-3xl text-center">
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4   ">
-        Your Trusted Partner in Security & Manpower Solutions
-      </h1>
-      <p class="text-xl md:text-2xl mb-8 opacity-90 text-justify [text-align:justify] [hyphens:auto]">
-        Providing top-notch security services and professional manpower solutions for businesses and individuals.
-      </p>
-      <div class="flex justify-center gap-4 flex-wrap">
-       <a href="contect.html"> <button
-          class="bg-[rgb(27,54,93)] text-white px-8 py-3 rounded font-bold hover:bg-opacity-90 transition-colors">
-          Get Protected Now
-        </button></a>
-        <a href="#LearnMore">
-          <button
-            class="border-2 border-white text-white px-8 py-3 rounded font-bold hover:bg-white hover:text-primary transition-colors">
-            Learn More
-          </button>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CSS -->
-<style>
-#hero-bg {
-  background-image: url('images/hero-1.png');
-}
-</style>
-
-<!-- JS -->
-<script>
-const images = [
-  "images/hero-1.png",
-  "images/hero-2.png",
-  "images/hero-3.png",
- 
-];
-
-let current = 0;
-const heroBg = document.getElementById("hero-bg");
-
-setInterval(() => {
-  current = (current + 1) % images.length;
-  heroBg.style.opacity = 0;
-
-  setTimeout(() => {
-    heroBg.style.backgroundImage = `url('${images[current]}')`;
-    heroBg.style.opacity = 1;
-  }, 1000); // Fade out and in
-}, 5000); // Change every 5 seconds
-</script>
-
-
- <!-- About Section -->
-<section id="about" class="py-20 bg-white">
-  <div class="container mx-auto px-4">
-
-    <!-- Heading -->
-    <div class="text-center mb-16" data-aos="fade-down" data-aos-duration="1000">
-      <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">About Ronak Rudra Security</h2>
-      <div class="w-24 h-1 bg-secondary mx-auto mb-6"></div>
-      <p class="text-gray-600 max-w-3xl mx-auto text-justify">
-        Dedicated to providing exceptional security and manpower solutions since 2010, with a focus on
-        professionalism, reliability, and customer satisfaction.
-      </p>
-    </div>
-
-    <!-- City Buttons -->
-    <div class="city-buttons flex flex-wrap justify-center gap-3 mb-12">
-      <button class="city-btn relative px-5 py-2 rounded-full font-bold text-white border-[3px] border-white/30 bg-[rgb(27,54,93)] shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:border-white/60" data-city="Indore">
-        <span class="relative z-10">Indore</span>
-        <span class="shine-effect"></span>
-      </button>
-      <button class="city-btn relative px-5 py-2 rounded-full font-bold text-white border-[3px] border-white/30 bg-[rgb(27,54,93)] shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:border-white/60" data-city="Bhopal">
-        <span class="relative z-10">Bhopal</span>
-        <span class="shine-effect"></span>
-      </button>
-      <button class="city-btn relative px-5 py-2 rounded-full font-bold text-white border-[3px] border-white/30 bg-[rgb(27,54,93)] shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:border-white/60" data-city="Ujjain">
-        <span class="relative z-10">Ujjain</span>
-        <span class="shine-effect"></span>
-      </button>
-      <button class="city-btn relative px-5 py-2 rounded-full font-bold text-white border-[3px] border-white/30 bg-[rgb(27,54,93)] shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:border-white/60" data-city="Gwalior">
-        <span class="relative z-10">Gwalior</span>
-        <span class="shine-effect"></span>
-      </button>
-      <button class="city-btn relative px-5 py-2 rounded-full font-bold text-white border-[3px] border-white/30 bg-[rgb(27,54,93)] shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:border-white/60" data-city="Jabalpur">
-        <span class="relative z-10">Jabalpur</span>
-        <span class="shine-effect"></span>
-      </button>
-    </div>
-
-    <!-- Content Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start" style="overflow-x: hidden !important;"> 
-
-      <!-- Interactive Map -->
-      <div data-aos="fade-right" data-aos-duration="1000">
-        <div id="map" class="w-full h-[400px] rounded-lg shadow-xl"></div>
-      </div>
-
-      <!-- Text Content -->
-      <div data-aos="fade-left" data-aos-duration="1000" style="overflow-x: hidden !important;">
-        <!-- Our Mission -->
-        <h3 class="text-2xl font-bold text-primary mb-4">Our Mission</h3>
-        <p class="text-gray-700 mb-6 text-justify">
-          To provide unparalleled security and manpower services that exceed client expectations through
-          professionalism, integrity, and continuous improvement.
+  <section id="home">
+    <div id="hero-bg" class="hero-slide active"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-badge">
+          <i class="fas fa-shield-alt"></i> Trusted Since 2010
+        </div>
+        <h1>Your Trusted Partner in Security & Manpower Solutions</h1>
+        <p class="hero-subtitle">
+          Providing elite security services and professional manpower solutions for businesses and individuals with uncompromising excellence.
         </p>
-
-        <!-- Why Trust Us -->
-        <h3 class="text-2xl font-bold text-primary mb-4">Why Trust Us</h3>
-        <ul class="space-y-3 mb-8">
-          <li class="flex items-start">
-            <div class="w-6 h-6 flex items-center justify-center text-[rgb(255,215,0)] mr-2 mt-1">
-              <i class="ri-check-line ri-lg"></i>
-            </div>
-            <span class="text-gray-700">Over 15 years of industry experience</span>
-          </li>
-          <li class="flex items-start">
-            <div class="w-6 h-6 flex items-center justify-center text-[rgb(255,215,0)] mr-2 mt-1">
-              <i class="ri-check-line ri-lg"></i>
-            </div>
-            <span class="text-gray-700">Professionally trained and vetted security personnel</span>
-          </li>
-          <li class="flex items-start">
-            <div class="w-6 h-6 flex items-center justify-center text-[rgb(255,215,0)] mr-2 mt-1">
-              <i class="ri-check-line ri-lg"></i>
-            </div>
-            <span class="text-gray-700">Customized security solutions for every client</span>
-          </li>
-          <li class="flex items-start">
-            <div class="w-6 h-6 flex items-center justify-center text-[rgb(255,215,0)] mr-2 mt-1">
-              <i class="ri-check-line ri-lg"></i>
-            </div>
-            <span class="text-gray-700">24/7 monitoring and rapid response capabilities</span>
-          </li>
-        </ul>
-
-        <!-- Badges -->
-        <div class="flex flex-wrap gap-4 justify-center md:justify-start">
-          <img src="Gemini_Generated_Image_3ra1lq3ra1lq3ra1.jpeg" alt="Security Certification" class="h-16 w-auto" />
-          <img src="Gemini_Generated_Image_3ra1lq3ra1lq3ra1.jpeg" alt="Industry Association" class="h-16 w-auto" />
-          <img src="Gemini_Generated_Image_3ra1lq3ra1lq3ra1.jpeg" alt="Excellence Award" class="h-16 w-auto" />
+        <div class="cta-buttons">
+          <a href="contact.html">
+            <button class="btn-primary">
+              Get Protected Now <i class="fas fa-arrow-right"></i>
+            </button>
+          </a>
+          <a href="about.html">
+            <button class="btn-secondary">
+              Explore Our Services
+            </button>
+          </a>
         </div>
       </div>
     </div>
-  </div>
+    
+    <div class="scroll-indicator">
+      <a href="#LearnMore">
+        <i class="fas fa-chevron-down"></i>
+        <span>Scroll Down</span>
+      </a>
+    </div>
+    
+    <div class="indicators">
+      <div class="indicator active" data-index="0"></div>
+      <div class="indicator" data-index="1"></div>
+      <div class="indicator" data-index="2"></div>
+    </div>
+  </section>
 
-  <!-- Leaflet CSS -->
+  <script>
+    const images = [
+      "https://images.unsplash.com/photo-1580554530778-ca36943938b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1531058020387-3be344556be6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1583863788430-ea3305e3d081?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+    ];
+
+    let current = 0;
+    const heroBg = document.getElementById("hero-bg");
+    const indicators = document.querySelectorAll('.indicator');
+    
+    // Preload images for smoother transitions
+    images.forEach(src => {
+      const img = new Image();
+      img.src = src;
+    });
+
+    function changeBackground() {
+      // Fade out current background
+      heroBg.style.opacity = 0;
+      
+      setTimeout(() => {
+        // Update background and indicators
+        heroBg.style.backgroundImage = `url('${images[current]}')`;
+        indicators.forEach((indicator, index) => {
+          indicator.classList.toggle('active', index === current);
+        });
+        
+        // Fade in new background
+        setTimeout(() => {
+          heroBg.style.opacity = 1;
+        }, 50);
+      }, 1000);
+      
+      // Update current index
+      current = (current + 1) % images.length;
+    }
+
+    // Initialize with first image
+    heroBg.style.backgroundImage = `url('${images[0]}')`;
+    
+    // Set interval for automatic slideshow
+    const slideInterval = setInterval(changeBackground, 5000);
+    
+    // Add click events to indicators
+    indicators.forEach((indicator, index) => {
+      indicator.addEventListener('click', () => {
+        current = index;
+        changeBackground();
+        // Reset the interval
+        clearInterval(slideInterval);
+        setInterval(changeBackground, 5000);
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium About Section</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+    
+    body {
+      background-color: #f8fafc;
+      color: #334155;
+      overflow-x: hidden;
+    }
+    
+    /* About Section */
+    #about {
+      padding: 6rem 0;
+      background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+      position: relative;
+    }
+    
+    #about::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 500px;
+      background: linear-gradient(135deg, rgba(27,54,93,0.03) 0%, rgba(16,30,51,0.05) 100%);
+      z-index: 0;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      position: relative;
+      z-index: 10;
+    }
+    
+    /* Heading */
+    .section-heading {
+      text-align: center;
+      margin-bottom: 5rem;
+    }
+    
+    .section-heading h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #1B365D;
+      margin-bottom: 1.5rem;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .section-heading h2::after {
+      content: '';
+      position: absolute;
+      bottom: -0.75rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, #1B365D 0%, #2A4B7C 100%);
+      border-radius: 2px;
+    }
+    
+    .section-heading p {
+      font-size: 1.125rem;
+      line-height: 1.7;
+      color: #64748B;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    /* City Buttons */
+    .city-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 4rem;
+    }
+    
+    .city-btn {
+      position: relative;
+      padding: 0.875rem 1.75rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: white;
+      background: linear-gradient(90deg, #1B365D 0%, #2A4B7C 100%);
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(27, 54, 93, 0.2);
+      overflow: hidden;
+      z-index: 1;
+    }
+    
+    .city-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, #2A4B7C 0%, #3A5B8C 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: -1;
+    }
+    
+    .city-btn:hover::before {
+      opacity: 1;
+    }
+    
+    .city-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(27, 54, 93, 0.25);
+    }
+    
+    .city-btn.active {
+      background: linear-gradient(90deg, #2A4B7C 0%, #3A5B8C 100%);
+      box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.5);
+    }
+    
+    .shine-effect {
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.3) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: rotate(30deg);
+      transition: all 0.7s;
+      opacity: 0;
+    }
+    
+    .city-btn:hover .shine-effect {
+      animation: shine 1.5s ease-out infinite;
+      opacity: 1;
+    }
+    
+    @keyframes shine {
+      0% {
+        left: -50%;
+      }
+      100% {
+        left: 100%;
+      }
+    }
+    
+    /* Content Grid */
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 4rem;
+    }
+    
+    @media (min-width: 992px) {
+      .content-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+        align-items: start;
+      }
+    }
+    
+    /* Map Container */
+    .map-container {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      height: 450px;
+      transition: all 0.3s ease;
+    }
+    
+    .map-container:hover {
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+    
+    #map {
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+    }
+    
+    /* Text Content */
+    .text-content {
+      padding: 0 1rem;
+    }
+    
+    @media (min-width: 992px) {
+      .text-content {
+        padding: 0 0 0 1rem;
+      }
+    }
+    
+    .mission-section, .trust-section {
+      margin-bottom: 2.5rem;
+    }
+    
+    .mission-section h3, .trust-section h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1B365D;
+      margin-bottom: 1.25rem;
+      position: relative;
+      padding-left: 1.75rem;
+    }
+    
+    .mission-section h3::before, .trust-section h3::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 12px;
+      height: 12px;
+      background: linear-gradient(135deg, #1B365D 0%, #2A4B7C 100%);
+      border-radius: 2px;
+    }
+    
+    .mission-section p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: #64748B;
+      margin-bottom: 1.5rem;
+    }
+    
+    .trust-list {
+      list-style: none;
+    }
+    
+    .trust-list li {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      background: rgba(27, 54, 93, 0.03);
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+    
+    .trust-list li:hover {
+      background: rgba(27, 54, 93, 0.07);
+      transform: translateX(5px);
+    }
+    
+    .trust-list li i {
+      color: #FFD700;
+      font-size: 1.25rem;
+      margin-right: 1rem;
+      flex-shrink: 0;
+    }
+    
+    .trust-list li span {
+      font-size: 1.05rem;
+      line-height: 1.5;
+      color: #64748B;
+    }
+    
+    /* Badges */
+    .badges-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    
+    @media (min-width: 768px) {
+      .badges-container {
+        justify-content: flex-start;
+      }
+    }
+    
+    .badge {
+      width: 80px;
+      height: 80px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .badge::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(27, 54, 93, 0.1) 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .badge:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+    
+    .badge:hover::before {
+      opacity: 1;
+    }
+    
+    .badge img {
+      max-width: 60%;
+      max-height: 60%;
+      object-fit: contain;
+    }
+    
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .fade-in {
+      animation: fadeIn 1s ease-out forwards;
+    }
+    
+    .delay-1 {
+      animation-delay: 0.2s;
+    }
+    
+    .delay-2 {
+      animation-delay: 0.4s;
+    }
+    
+    .delay-3 {
+      animation-delay: 0.6s;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      #about {
+        padding: 4rem 0;
+      }
+      
+      .section-heading {
+        margin-bottom: 3rem;
+      }
+      
+      .section-heading h2 {
+        font-size: 2rem;
+      }
+      
+      .city-buttons {
+        margin-bottom: 3rem;
+      }
+      
+      .map-container {
+        height: 350px;
+      }
+      
+      .mission-section h3, .trust-section h3 {
+        font-size: 1.35rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <!-- Heading -->
+      <div class="section-heading fade-in">
+        <h2>About Ronak Rudra Security</h2>
+        <p>Dedicated to providing exceptional security and manpower solutions since 2010, with a focus on professionalism, reliability, and customer satisfaction.</p>
+      </div>
 
-  <!-- Leaflet JS -->
+      <!-- City Buttons -->
+      <div class="city-buttons">
+        <button class="city-btn active" data-city="Indore">
+          <span class="btn-text">Indore</span>
+          <span class="shine-effect"></span>
+        </button>
+        <button class="city-btn" data-city="Bhopal">
+          <span class="btn-text">Bhopal</span>
+          <span class="shine-effect"></span>
+        </button>
+        <button class="city-btn" data-city="Ujjain">
+          <span class="btn-text">Ujjain</span>
+          <span class="shine-effect"></span>
+        </button>
+        <button class="city-btn" data-city="Gwalior">
+          <span class="btn-text">Gwalior</span>
+          <span class="shine-effect"></span>
+        </button>
+        <button class="city-btn" data-city="Jabalpur">
+          <span class="btn-text">Jabalpur</span>
+          <span class="shine-effect"></span>
+        </button>
+      </div>
+
+      <!-- Content Grid -->
+      <div class="content-grid">
+        <!-- Interactive Map -->
+        <div class="map-container fade-in delay-1">
+          <div id="map"></div>
+        </div>
+
+        <!-- Text Content -->
+        <div class="text-content fade-in delay-2">
+          <!-- Our Mission -->
+          <div class="mission-section">
+            <h3>Our Mission</h3>
+            <p>To provide unparalleled security and manpower services that exceed client expectations through professionalism, integrity, and continuous improvement.</p>
+          </div>
+
+          <!-- Why Trust Us -->
+          <div class="trust-section">
+            <h3>Why Trust Us</h3>
+            <ul class="trust-list">
+              <li>
+                <i class="fas fa-shield-alt"></i>
+                <span>Over 15 years of industry experience</span>
+              </li>
+              <li>
+                <i class="fas fa-user-check"></i>
+                <span>Professionally trained and vetted security personnel</span>
+              </li>
+              <li>
+                <i class="fas fa-cogs"></i>
+                <span>Customized security solutions for every client</span>
+              </li>
+              <li>
+                <i class="fas fa-clock"></i>
+                <span>24/7 monitoring and rapid response capabilities</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Badges -->
+          <div class="badges-container fade-in delay-3">
+            <div class="badge">
+              <img src="https://via.placeholder.com/80x80/1B365D/FFFFFF?text=ISO" alt="Security Certification">
+            </div>
+            <div class="badge">
+              <img src="https://via.placeholder.com/80x80/1B365D/FFFFFF?text=ASIS" alt="Industry Association">
+            </div>
+            <div class="badge">
+              <img src="https://via.placeholder.com/80x80/1B365D/FFFFFF?text=AWARD" alt="Excellence Award">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
-
-  <!-- Map Script -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const map = L.map("map").setView([22.9734, 78.6569], 5); // India
-
+      // Initialize map
+      const map = L.map("map").setView([22.9734, 78.6569], 5);
+      
+      // Add tile layer
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>',
       }).addTo(map);
-
+      
+      // Custom icon
+      const securityIcon = L.icon({
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+      });
+      
+      // City data
       const cities = [
         { name: "Indore", coords: [22.7196, 75.8577] },
         { name: "Bhopal", coords: [23.2599, 77.4126] },
@@ -578,73 +1286,71 @@ setInterval(() => {
         { name: "Gwalior", coords: [26.2183, 78.1828] },
         { name: "Jabalpur", coords: [23.1815, 79.9864] },
       ];
-
+      
+      // Add markers
       const markers = {};
       cities.forEach((city) => {
-        const marker = L.marker(city.coords)
+        const marker = L.marker(city.coords, {icon: securityIcon})
           .addTo(map)
-          .bindPopup(`<b>${city.name}</b><br>Security Services Active`);
+          .bindPopup(`<b>${city.name}</b><br>Ronak Rudra Security Services`);
         markers[city.name] = marker;
       });
-
-      document.querySelectorAll(".city-btn").forEach((btn) => {
+      
+      // City button functionality
+      const cityButtons = document.querySelectorAll(".city-btn");
+      
+      cityButtons.forEach((btn) => {
         btn.addEventListener("click", () => {
+          // Remove active class from all buttons
+          cityButtons.forEach(b => b.classList.remove("active"));
+          
+          // Add active class to clicked button
+          btn.classList.add("active");
+          
+          // Center map on selected city
           const cityName = btn.getAttribute("data-city");
           const marker = markers[cityName];
           if (marker) {
-            map.setView(marker.getLatLng(), 13, { animate: true });
-            marker.openPopup();
+            map.setView(marker.getLatLng(), 13, { 
+              animate: true,
+              duration: 1.5
+            });
+            setTimeout(() => {
+              marker.openPopup();
+            }, 1000);
           }
         });
       });
-
+      
+      // Fix map size
       setTimeout(() => {
         map.invalidateSize();
       }, 500);
+      
+      // Intersection Observer for animations
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+      
+      // Observe elements with fade-in class
+      document.querySelectorAll('.fade-in').forEach(el => {
+        observer.observe(el);
+      });
     });
   </script>
-
-  <!-- Custom Styling -->
-  <style>
-    #map {
-      width: 100%;
-      height: 400px;
-    }
-
-    @media (max-width: 768px) {
-      #map {
-        height: 300px;
-      }
-    }
-
-    .shine-effect {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -100px;
-      width: 100px;
-      height: 100%;
-      background-image: linear-gradient(
-        120deg,
-        rgba(255, 255, 255, 0) 30%,
-        rgba(255, 255, 255, 0.8),
-        rgba(255, 255, 255, 0) 70%
-      );
-      opacity: 0.6;
-      animation: shine 1.5s ease-out infinite;
-    }
-
-    @keyframes shine {
-      0% {
-        left: -100px;
-      }
-      60%, 100% {
-        left: 100%;
-      }
-    }
-  </style>
-</section>
-
+</body>
+</html>
 
 
  
@@ -885,7 +1591,7 @@ setInterval(() => {
         <div class="card-content">
           <h3>Armed & Unarmed Security</h3>
           <p>Trained professionals for all security needs</p>
-          <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+          <a href="a&u.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
 
@@ -902,7 +1608,7 @@ setInterval(() => {
         <div class="card-content">
           <h3>Patrolling Services</h3>
           <p>24/7 monitoring and supervision</p>
-          <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+          <a href="petroling.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
 
@@ -919,7 +1625,7 @@ setInterval(() => {
         <div class="card-content">
           <h3>GPS Tracking</h3>
           <p>Real-time monitoring solutions</p>
-          <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+          <a href="gps.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
 
@@ -936,7 +1642,7 @@ setInterval(() => {
         <div class="card-content">
           <h3>CCTV Surveillance</h3>
           <p>Advanced monitoring technology</p>
-          <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+          <a href="cctv.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
 
@@ -953,7 +1659,7 @@ setInterval(() => {
         <div class="card-content">
           <h3>Building Security</h3>
           <p>Comprehensive facility protection</p>
-          <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+          <a href="buildingsecurity.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
 
@@ -970,7 +1676,7 @@ setInterval(() => {
         <div class="card-content">
           <h3>Traffic Management</h3>
           <p>Efficient parking solutions</p>
-          <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+          <a href="carparking.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
 
@@ -1202,6 +1908,7 @@ setInterval(() => {
   <!-- Why Choose Us Section -->
 <section class="why-choose-us py-12 md:py-20 bg-white">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Heading -->
     <div class="text-center mb-12 md:mb-16">
       <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
         Why Choose Us
@@ -1212,20 +1919,21 @@ setInterval(() => {
       </p>
     </div>
 
+    <!-- Cards Grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
       <!-- Card 1 -->
       <div class="flip-card">
         <div class="flip-card-inner">
-          <div class="flip-card-front p-4 sm:p-6">
-            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center mb-3 sm:mb-4" style="background-color: rgb(27,54,93);">
+          <div class="flip-card-front p-6">
+            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center mb-4 mx-auto" style="background-color: rgb(27,54,93);">
               <i class="ri-user-star-line text-2xl sm:text-3xl text-white"></i>
             </div>
-            <h3 class="text-lg sm:text-xl font-bold mb-2">Experienced Team</h3>
-            <p class="text-gray-600 text-sm">15+ years experience</p>
+            <h3 class="text-lg sm:text-xl font-bold mb-2 text-center">Experienced Team</h3>
+            <p class="text-gray-600 text-sm text-center">15+ years experience</p>
           </div>
-          <div class="flip-card-back p-4 sm:p-6">
+          <div class="flip-card-back p-6 flex flex-col justify-center text-center">
             <h3 class="text-lg sm:text-xl font-bold mb-3 text-white">Experienced Team</h3>
-            <p class="text-white text-sm text-justify [text-align:justify] [hyphens:auto]">Our professionals have extensive security industry experience with rigorous training.</p>
+            <p class="text-white text-sm">Our professionals have extensive security industry experience with rigorous training.</p>
           </div>
         </div>
       </div>
@@ -1233,16 +1941,16 @@ setInterval(() => {
       <!-- Card 2 -->
       <div class="flip-card">
         <div class="flip-card-inner">
-          <div class="flip-card-front p-4 sm:p-6">
-            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center mb-3 sm:mb-4" style="background-color: rgb(27,54,93);">
+          <div class="flip-card-front p-6">
+            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center mb-4 mx-auto" style="background-color: rgb(27,54,93);">
               <i class="ri-shield-check-line text-2xl sm:text-3xl text-white"></i>
             </div>
-            <h3 class="text-lg sm:text-xl font-bold mb-2">24/7 Support</h3>
-            <p class="text-gray-600 text-sm">Always available</p>
+            <h3 class="text-lg sm:text-xl font-bold mb-2 text-center">24/7 Support</h3>
+            <p class="text-gray-600 text-sm text-center">Always available</p>
           </div>
-          <div class="flip-card-back p-4 sm:p-6">
+          <div class="flip-card-back p-6 flex flex-col justify-center text-center">
             <h3 class="text-lg sm:text-xl font-bold mb-3 text-white">24/7 Support</h3>
-            <p class="text-white text-sm text-justify [text-align:justify] [hyphens:auto]">Round-the-clock monitoring and rapid response teams for immediate assistance.</p>
+            <p class="text-white text-sm">Round-the-clock monitoring and rapid response teams for immediate assistance.</p>
           </div>
         </div>
       </div>
@@ -1250,16 +1958,16 @@ setInterval(() => {
       <!-- Card 3 -->
       <div class="flip-card">
         <div class="flip-card-inner">
-          <div class="flip-card-front p-4 sm:p-6">
-            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center mb-3 sm:mb-4" style="background-color: rgb(27,54,93);">
+          <div class="flip-card-front p-6">
+            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center mb-4 mx-auto" style="background-color: rgb(27,54,93);">
               <i class="ri-customize-line text-2xl sm:text-3xl text-white"></i>
             </div>
-            <h3 class="text-lg sm:text-xl font-bold mb-2">Custom Solutions</h3>
-            <p class="text-gray-600 text-sm">Tailored for you</p>
+            <h3 class="text-lg sm:text-xl font-bold mb-2 text-center">Custom Solutions</h3>
+            <p class="text-gray-600 text-sm text-center">Tailored for you</p>
           </div>
-          <div class="flip-card-back p-4 sm:p-6">
+          <div class="flip-card-back p-6 flex flex-col justify-center text-center">
             <h3 class="text-lg sm:text-xl font-bold mb-3 text-white">Custom Solutions</h3>
-            <p class="text-white text-sm text-justify [text-align:justify] [hyphens:auto]">We design security solutions specifically for your unique requirements.</p>
+            <p class="text-white text-sm">We design security solutions specifically for your unique requirements.</p>
           </div>
         </div>
       </div>
@@ -1267,16 +1975,16 @@ setInterval(() => {
       <!-- Card 4 -->
       <div class="flip-card">
         <div class="flip-card-inner">
-          <div class="flip-card-front p-4 sm:p-6">
-            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center mb-3 sm:mb-4" style="background-color: rgb(27,54,93);">
+          <div class="flip-card-front p-6">
+            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center mb-4 mx-auto" style="background-color: rgb(27,54,93);">
               <i class="ri-award-line text-2xl sm:text-3xl text-white"></i>
             </div>
-            <h3 class="text-lg sm:text-xl font-bold mb-2">Proven Results</h3>
-            <p class="text-gray-600 text-sm">500+ clients</p>
+            <h3 class="text-lg sm:text-xl font-bold mb-2 text-center">Proven Results</h3>
+            <p class="text-gray-600 text-sm text-center">500+ clients</p>
           </div>
-          <div class="flip-card-back p-4 sm:p-6">
+          <div class="flip-card-back p-6 flex flex-col justify-center text-center">
             <h3 class="text-lg sm:text-xl font-bold mb-3 text-white">Proven Results</h3>
-            <p class="text-white text-sm text-justify [text-align:justify] [hyphens:auto]">Trusted by over 500 clients across multiple industries with proven success.</p>
+            <p class="text-white text-sm">Trusted by over 500 clients across multiple industries with proven success.</p>
           </div>
         </div>
       </div>
@@ -1284,205 +1992,345 @@ setInterval(() => {
   </div>
 </section>
 
+<!-- Flip Card CSS -->
+<style>
+.flip-card {
+  perspective: 1000px;
+  height: 220px;
+  cursor: pointer;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.flip-card-front {
+  background: #fff;
+}
+.flip-card-back {
+  background: rgb(27,54,93);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/* Mobile fix: Increase height for text wrapping */
+@media (max-width: 640px) {
+  .flip-card {
+    height: 260px;
+  }
+}
+</style>
 
 
- <style>
-    .progress-bar {
-      transition: width 2s ease;
-    }
 
-    .progress-container {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 1s ease;
-    }
 
-    .progress-container.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
 
 <body class="bg-gray-100 p-10 font-sans">
 
   <div class="space-y-10 max-w-4xl mx-auto">
-    <!-- Progress Template -->
-    <div class="progress-container">
-  <h2 class="text-xl font-semibold text-blue-900 mb-2">Client Satisfaction</h2>
-  <div class="w-full bg-blue-100 rounded h-8 overflow-hidden">
-    <div class="progress-bar h-full flex items-center justify-end text-white text-sm pr-3" data-value="100" style="width: 0%; background-color: rgb(27, 54, 93);">
-      <span class="percent">0%</span>
-    </div>
-  </div>
+  
 </div>
 
-
-
-<div class="progress-container">
-  <h2 class="text-xl font-semibold text-blue-900 mb-2">Site Deployment</h2>
-  <div class="w-full bg-blue-100 rounded h-8 overflow-hidden">
-    <div class="progress-bar h-full flex items-center justify-end text-white text-sm pr-3" data-value="99" style="width: 0%; background-color: rgb(27, 54, 93);">
-      <span class="percent">0%</span>
+  
+<!-- progress meter start   -->
+<section class="metrics-section">
+  <div class="metrics-container">
+    <div class="metrics-header">
+      <h2 class="metrics-title">Performance Metrics</h2>
+      <p class="metrics-subtitle">Tracking key performance indicators</p>
+    </div>
+    
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-card-header">
+          <h3 class="metric-title">Client Satisfaction</h3>
+          <div class="metric-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+              <path fill="currentColor" d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-4-9a4 4 0 1 0 8 0H8zm0-2a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm8 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+            </svg>
+          </div>
+        </div>
+        <div class="metric-track">
+          <div class="metric-bar cs-bar" data-value="100" style="width: 0%;">
+            <span class="metric-percent">0%</span>
+          </div>
+        </div>
+        <div class="metric-info">
+          <span class="metric-percent-text">0%</span>
+          <span class="metric-status">Excellent</span>
+        </div>
+        <div class="metric-footer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+          Increased by 5% from last quarter
+        </div>
+      </div>
+      
+      
+      
+      <div class="metric-card">
+        <div class="metric-card-header">
+          <h3 class="metric-title">Customer Support</h3>
+          <div class="metric-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+              <path fill="currentColor" d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 12h-2v-2h2v2zm0-4h-2V6h2v4z"/>
+            </svg>
+          </div>
+        </div>
+        <div class="metric-track">
+          <div class="metric-bar csup-bar" data-value="98" style="width: 0%;">
+            <span class="metric-percent">0%</span>
+          </div>
+        </div>
+        <div class="metric-info">
+          <span class="metric-percent-text">0%</span>
+          <span class="metric-status">Excellent</span>
+        </div>
+        <div class="metric-footer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          Average response time: 2.4 minutes
+        </div>
+      </div>
+      
+      <div class="metric-card">
+        <div class="metric-card-header">
+          <h3 class="metric-title">Training Quality</h3>
+          <div class="metric-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+              <path fill="currentColor" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+        </div>
+        <div class="metric-track">
+          <div class="metric-bar tq-bar" data-value="97" style="width: 0%;">
+            <span class="metric-percent">0%</span>
+          </div>
+        </div>
+        <div class="metric-info">
+          <span class="metric-percent-text">0%</span>
+          <span class="metric-status">Excellent</span>
+        </div>
+        <div class="metric-footer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="8.5" cy="7" r="4"></circle>
+            <polyline points="17 11 19 13 23 9"></polyline>
+          </svg>
+          Certified training program
+        </div>
+      </div>
     </div>
   </div>
-</div>
-
-<div class="progress-container">
-  <h2 class="text-xl font-semibold text-blue-900 mb-2">Customer Support</h2>
-  <div class="w-full bg-blue-100 rounded h-8 overflow-hidden">
-    <div class="progress-bar h-full flex items-center justify-end text-white text-sm pr-3" data-value="98" style="width: 0%; background-color: rgb(27, 54, 93);">
-      <span class="percent">0%</span>
-    </div>
-  </div>
-</div>
-
-<div class="progress-container">
-  <h2 class="text-xl font-semibold text-blue-900 mb-2">Training Quality</h2>
-  <div class="w-full bg-blue-100 rounded h-8 overflow-hidden">
-    <div class="progress-bar h-full flex items-center justify-end text-white text-sm pr-3" data-value="97" style="width: 0%; background-color: rgb(27, 54, 93);">
-      <span class="percent">0%</span>
-    </div>
-  </div>
-</div>
-
-  </div>
-
-  <script>
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const container = entry.target;
-          container.classList.add('visible');
-
-          const bar = container.querySelector('.progress-bar');
-          const percentText = bar.querySelector('.percent');
-          const target = +bar.getAttribute('data-value');
-
-          // Animate width
-          bar.style.width = target + '%';
-
-          // Animate counter
-          let current = 0;
-          const step = () => {
-            if (current < target) {
-              current += 1;
-              percentText.textContent = current + '%';
-              requestAnimationFrame(step);
-            } else {
-              percentText.textContent = target + '%';
-            }
-          };
-          requestAnimationFrame(step);
-
-          // Stop observing after animation
-          observer.unobserve(container);
-        }
-      });
-    }, { threshold: 0.3 });
-
-    document.querySelectorAll('.progress-container').forEach(container => {
-      observer.observe(container);
-    });
-  </script>
-
-
-
-
-
-
-
-
-<!-- CSS -->
-<style>
-  .flip-card {
-    perspective: 1000px;
-    height: 220px;
-    cursor: pointer;
-  }
-
-  .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-  }
-
-  .flip-card:hover .flip-card-inner,
-  .flip-card.active .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-
-  .flip-card-front,
-  .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    box-sizing: border-box;
-    padding: 20px;
-  }
-
-  .flip-card-back {
-    transform: rotateY(180deg);
-    background-color: rgb(27, 54, 93);
-    color: white;
-  }
-
-  .flip-card-back p,
-  .flip-card-back h3 {
-    color: white;
-    text-align: center;
-  }
-
-  /* Mobile Responsiveness */
-  @media (max-width: 640px) {
-    .flip-card {
-      height: 200px;
+  
+  <style>
+    .metrics-section {
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    .metrics-container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    
+    .metrics-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    
+    .metrics-title {
+      font-size: 36px;
+      font-weight: 700;
+      color: #1b365d;
       margin-bottom: 15px;
     }
-
-    .flip-card:last-child {
-      margin-bottom: 0;
+    
+    .metrics-subtitle {
+      color: #6b7b9c;
+      font-size: 18px;
+      font-weight: 500;
     }
-
-    .flip-card-back p {
+    
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    
+    .metric-card {
+      background: white;
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 10px 30px rgba(27, 54, 93, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .metric-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(27, 54, 93, 0.15);
+    }
+    
+    .metric-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    
+    .metric-title {
+      font-size: 20px;
+      font-weight: 600;
+      color: #1b365d;
+    }
+    
+    .metric-icon {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: rgba(27, 54, 93, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1b365d;
+    }
+    
+    .metric-track {
+      height: 16px;
+      background: #e6e9f0;
+      border-radius: 100px;
+      overflow: hidden;
+      position: relative;
+      margin-bottom: 10px;
+    }
+    
+    .metric-bar {
+      height: 100%;
+      border-radius: 100px;
+      width: 0%;
+      transition: width 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      background: linear-gradient(90deg, #1b365d 0%, #4a8cff 100%);
+      box-shadow: 0 0 10px rgba(74, 140, 255, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 10px;
+      color: white;
+      font-weight: 600;
+      font-size: 12px;
+    }
+    
+    .metric-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 12px;
+    }
+    
+    .metric-percent-text {
+      font-size: 18px;
+      font-weight: 700;
+      color: #1b365d;
+    }
+    
+    .metric-status {
       font-size: 14px;
+      color: #6b7b9c;
+      font-weight: 500;
+      background: #f0f4ff;
+      padding: 4px 12px;
+      border-radius: 100px;
     }
-  }
-
-  @media (min-width: 641px) and (max-width: 1023px) {
-    .flip-card {
-      height: 240px;
+    
+    .metric-footer {
+      display: flex;
+      align-items: center;
+      margin-top: 15px;
+      color: #6b7b9c;
+      font-size: 14px;
+      gap: 8px;
     }
-  }
-</style>
-
-<!-- JS for Tap-to-Flip on Mobile -->
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const flipCards = document.querySelectorAll('.flip-card');
-
-    flipCards.forEach(card => {
-      card.addEventListener('click', function () {
-        if (window.innerWidth <= 768) {
-          flipCards.forEach(c => {
-            if (c !== this) c.classList.remove('active');
-          });
-          this.classList.toggle('active');
-        }
+    
+    @media (max-width: 768px) {
+      .metrics-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .metrics-title {
+        font-size: 28px;
+      }
+      
+      .metrics-subtitle {
+        font-size: 16px;
+      }
+    }
+  </style>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const card = entry.target;
+            const bar = card.querySelector('.metric-bar');
+            const percentText = card.querySelector('.metric-percent-text');
+            const target = +bar.getAttribute('data-value');
+            
+            // Animate width
+            bar.style.width = target + '%';
+            
+            // Animate counter
+            let current = 0;
+            const duration = 2000;
+            const frameRate = 1000/60;
+            const totalFrames = duration / frameRate;
+            const increment = target / totalFrames;
+            
+            const timer = setInterval(() => {
+              current += increment;
+              if (current >= target) {
+                current = target;
+                clearInterval(timer);
+              }
+              percentText.textContent = Math.round(current) + '%';
+            }, frameRate);
+            
+            // Stop observing after animation
+            observer.unobserve(card);
+          }
+        });
+      }, { threshold: 0.3 });
+      
+      document.querySelectorAll('.metric-card').forEach(card => {
+        observer.observe(card);
       });
     });
-  });
-</script>
+  </script>
+</section>
+
+
+<!-- progress meter end   -->
+
+
 
 
 
