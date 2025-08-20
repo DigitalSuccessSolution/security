@@ -395,20 +395,426 @@
   }
 </script>
 
-<!-- Contact Hero Section -->
-<section
-  class="w-full h-[70vh] md:h-[80vh] flex items-center justify-center relative bg-cover bg-center"
-  style="background-image: url('images/contect-hero.png');"
->
-  <div class="absolute inset-0 bg-black bg-opacity-50"></div>
 
-  <div class="relative z-10 text-center px-4">
-    <h1 class="text-white text-3xl md:text-5xl font-bold mb-4">Contact Us</h1>
-    <p class="text-white text-base md:text-lg max-w-xl mx-auto">
-      Have questions or need help? Reach out to us — we're here to assist you 24/7.
-    </p>
+
+
+<!-- Modern Contact Hero Section -->
+<section class="contact-hero-section">
+  <div class="hero-background">
+    <div class="background-overlay"></div>
+    <div class="gradient-overlay"></div>
+  </div>
+  
+  <div class="hero-content">
+    <div class="content-wrapper">
+      <h1 class="hero-title">Get In Touch</h1>
+      <p class="hero-subtitle">We're here to listen and provide solutions. Reach out to start the conversation with our team.</p>
+      
+      <div class="contact-highlights">
+        <div class="highlight-item">
+          <div class="icon-wrapper">
+            <i class="fas fa-clock"></i>
+          </div>
+          <p>24/7 Support</p>
+        </div>
+        <div class="highlight-item">
+          <div class="icon-wrapper">
+            <i class="fas fa-headset"></i>
+          </div>
+          <p>Expert Assistance</p>
+        </div>
+        <div class="highlight-item">
+          <div class="icon-wrapper">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <p>Custom Solutions</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="scroll-indicator">
+    <div class="indicator-line"></div>
+    <i class="fas fa-chevron-down"></i>
   </div>
 </section>
+
+<style>
+.contact-hero-section {
+  position: relative;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('images/contect-hero.png') center/cover no-repeat;
+}
+
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.85);
+}
+
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(168, 85, 247, 0.15) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content-wrapper {
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.contact-highlights {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.highlight-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-wrapper {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.icon-wrapper:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(168, 85, 247, 0.2) 100%);
+}
+
+.icon-wrapper i {
+  font-size: 1.8rem;
+  color: #e0e7ff;
+}
+
+.highlight-item p {
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+.indicator-line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, rgba(99, 102, 241, 0.8), transparent);
+  margin-bottom: 10px;
+}
+
+.scroll-indicator i {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.2rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-hero-section {
+    height: 80vh;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+  }
+  
+  .contact-highlights {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .highlight-item {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  
+  .icon-wrapper {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .icon-wrapper i {
+    font-size: 1.3rem;
+  }
+}
+</style>
+
+
+
+
+<section class="contact-section">
+  <div class="container">
+    <h2 class="section-title">Get in Touch</h2>
+    <p class="section-subtitle">We'd love to hear from you. Choose the most convenient way to contact us, and our team will respond promptly.</p>
+    
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="contact-icon">
+          <i class="fas fa-phone"></i>
+        </div>
+        <h3>Call Us</h3>
+        <p>Speak directly with our team</p>
+        <p>+1 (555) 123-4567</p>
+        <a href="tel:+15551234567" class="contact-link">Call Now <i class="fas fa-arrow-right"></i></a>
+      </div>
+      
+      <div class="contact-card">
+        <div class="contact-icon">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <h3>Email Us</h3>
+        <p>Send us a message anytime</p>
+        <p>info@premiumcompany.com</p>
+        <a href="mailto:info@premiumcompany.com" class="contact-link">Send Email <i class="fas fa-arrow-right"></i></a>
+      </div>
+      
+      <div class="contact-card">
+        <div class="contact-icon">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <h3>Visit Us</h3>
+        <p>Come see us in person</p>
+        <p>123 Premium Avenue, Suite 100</p>
+        <p>Business District, NY 10001</p>
+        <a href="#" class="contact-link">Get Directions <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.contact-section {
+  padding: 100px 0;
+  background: #ffffff;
+  position: relative;
+}
+
+.contact-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-section .section-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  position: relative;
+  color: rgb(27, 54, 93);
+}
+
+.contact-section .section-title:after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: rgb(255, 145, 77);
+  margin: 15px auto;
+  border-radius: 2px;
+}
+
+.contact-section .section-subtitle {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 60px;
+  font-size: 1.1rem;
+  color: #64748b;
+}
+
+.contact-section .contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.contact-section .contact-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(27, 54, 93, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-section .contact-card:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: rgb(255, 145, 77);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.contact-section .contact-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(27, 54, 93, 0.1);
+}
+
+.contact-section .contact-card:hover:before {
+  transform: scaleX(1);
+}
+
+.contact-section .contact-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(27, 54, 93, 0.1);
+  border-radius: 50%;
+  font-size: 30px;
+  color: rgb(27, 54, 93);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.contact-section .contact-card:hover .contact-icon {
+  background: rgb(27, 54, 93);
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+.contact-section .contact-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: rgb(27, 54, 93);
+}
+
+.contact-section .contact-card p {
+  color: #64748b;
+  margin-bottom: 10px;
+}
+
+.contact-section .contact-link {
+  color: rgb(255, 145, 77);
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 15px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.contact-section .contact-link:hover {
+  color: rgb(27, 54, 93);
+  transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+  .contact-section .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-section .section-title {
+    font-size: 2rem;
+  }
+}
+</style>
 
 
   <!-- Contact Section -->
