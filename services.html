@@ -272,43 +272,120 @@ input:focus, textarea:focus {
   </head>
 
 <body class="bg-gray-50">
-  <!-- Header -->
-  <header class="header fixed w-full bg-white bg-opacity-90 shadow-md z-50 transition-all duration-300">
-    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="#" class="flex items-center">
-        <img src="logo (2).png" alt="Ronak Rudra Logo" class="h-12 w-auto">
-      </a>
+<!-- Header -->
+<header class="header fixed w-full bg-white bg-opacity-90 shadow-md z-50 transition-all duration-300">
+  <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="#" class="flex items-center">
+      <img src="images/WhatsApp_Image_2025-08-06_at_6.28.27_PM-removebg-preview.png" alt="Ronak Rudra Logo" class="h-12 w-auto">
+    </a>
 
-        <!-- Desktop Navigation -->
-      <nav class="hidden md:flex items-center space-x-8">
-        <a href="index.html" class="text-gray-700 hover:text-primary font-medium transition-colors">Home</a>
-        <a href="about.html" class="text-gray-700 hover:text-primary font-medium transition-colors">About</a>
-        <a href="services.html" class="text-gray-700 hover:text-primary font-medium transition-colors">Services</a>
-        <a href="contect.html" class="text-gray-700 hover:text-primary font-medium transition-colors">Contact</a>
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex items-center space-x-8 relative">
+      <a href="index.html" class="text-gray-700 hover:text-primary font-medium transition-colors">Home</a>
+
+      <!-- About Dropdown -->
+      <div class="group relative">
+        <button class="text-gray-700 hover:text-primary font-medium transition-colors flex items-center">
+          About <i class="ri-arrow-down-s-line ml-1"></i>
+        </button>
+        <div class="absolute left-0 hidden group-hover:block bg-white shadow-md rounded-md mt-2 w-40">
+          <a href="about.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">About Us</a>
+          <a href="team.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Our Team</a>
+        </div>
+      </div>
+
+      <!-- Services Dropdown -->
+      <div class="group relative">
+        <button class="text-gray-700 hover:text-primary font-medium transition-colors flex items-center">
+          Services <i class="ri-arrow-down-s-line ml-1"></i>
+        </button>
+        <div class="absolute left-0 hidden group-hover:block bg-white shadow-md rounded-md mt-2 w-56">
+          <a href="services.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Our Services</a>
+          <a href="armed.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Armed & Unarmed</a>
+          <a href="patrolling.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Patrolling & Supervising</a>
+          <a href="gps.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">GPS & Monitoring</a>
+          <a href="cctv.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">CCTV & Monitoring</a>
+          <a href="building.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Building Security</a>
+          <a href="parking.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Car Parking & Traffic</a>
+        </div>
+      </div>
+
+      <!-- Career & Contact -->
+      <a href="career.html" class="text-gray-700 hover:text-primary font-medium transition-colors">Career</a>
+      <a href="contect.html" class="text-gray-700 hover:text-primary font-medium transition-colors">Contact</a>
+
+      <a href="contect.html"
+        class="bg-[rgb(27,54,93)] text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap inline-block">
+        Get Protected Now
+      </a>
+    </nav>
+
+    <!-- Mobile Navigation Toggle -->
+    <div class="md:hidden w-10 h-10 flex items-center justify-center cursor-pointer" id="mobile-menu-button">
+      <i class="ri-menu-line ri-2x text-primary"></i>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation Menu -->
+  <div class="md:hidden bg-white absolute w-full left-0 top-full shadow-md hidden" id="mobile-menu">
+    <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+
+      <a href="index.html" class="text-gray-700 hover:text-primary font-medium py-2 transition-colors">Home</a>
+
+      <!-- About Dropdown Mobile -->
+      <div>
+        <button class="w-full flex justify-between items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors" onclick="toggleDropdown('about-dropdown')">
+          About <i class="ri-arrow-down-s-line"></i>
+        </button>
+        <div id="about-dropdown" class="hidden flex flex-col ml-4 space-y-2">
+          <a href="about.html" class="text-gray-600 hover:text-primary">About Us</a>
+          <a href="team.html" class="text-gray-600 hover:text-primary">Our Team</a>
+        </div>
+      </div>
+
+      <!-- Services Dropdown Mobile -->
+      <div>
+        <button class="w-full flex justify-between items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors" onclick="toggleDropdown('services-dropdown')">
+          Services <i class="ri-arrow-down-s-line"></i>
+        </button>
+        <div id="services-dropdown" class="hidden flex flex-col ml-4 space-y-2">
+          <a href="services.html" class="text-gray-600 hover:text-primary">Our Services</a>
+          <a href="armed.html" class="text-gray-600 hover:text-primary">Armed & Unarmed</a>
+          <a href="patrolling.html" class="text-gray-600 hover:text-primary">Patrolling & Supervising</a>
+          <a href="gps.html" class="text-gray-600 hover:text-primary">GPS & Monitoring</a>
+          <a href="cctv.html" class="text-gray-600 hover:text-primary">CCTV & Monitoring</a>
+          <a href="building.html" class="text-gray-600 hover:text-primary">Building Security</a>
+          <a href="parking.html" class="text-gray-600 hover:text-primary">Car Parking & Traffic</a>
+        </div>
+      </div>
+
+      <!-- Career & Contact (Mobile Order) -->
+      <a href="career.html" class="text-gray-700 hover:text-primary font-medium py-2 transition-colors">Career</a>
+      <a href="contect.html" class="text-gray-700 hover:text-primary font-medium py-2 transition-colors">Contact</a>
+
+      <a href="contect.html">
         <button
           class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">
           Get Protected Now
         </button>
-      </nav>
-      <!-- Mobile Navigation Toggle -->
-      <div class="md:hidden w-10 h-10 flex items-center justify-center cursor-pointer" id="mobile-menu-button">
-        <i class="ri-menu-line ri-2x text-primary"></i>
-      </div>
+      </a>
     </div>
-    <!-- Mobile Navigation Menu -->
-    <div class="md:hidden bg-white absolute w-full left-0 top-full shadow-md hidden" id="mobile-menu">
-      <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
-        <a href="index.html" class="text-gray-700 hover:text-primary font-medium py-2 transition-colors">Home</a>
-        <a href="about.html" class="text-gray-700 hover:text-primary font-medium py-2 transition-colors">About</a>
-        <a href="services.html" class="text-gray-700 hover:text-primary font-medium py-2 transition-colors">Services</a>
-        <a href="contect.html" class="text-gray-700 hover:text-primary font-medium py-2 transition-colors">Contact</a>
-        <button
-          class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">
-          Get Protected Now
-        </button>
-      </div>
-    </div>
-  </header>
+  </div>
+</header>
+
+<!-- JS for Mobile Dropdown -->
+<script>
+  const mobileMenuBtn = document.getElementById("mobile-menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  mobileMenuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+
+  function toggleDropdown(id) {
+    document.getElementById(id).classList.toggle("hidden");
+  }
+</script>
 
 <!-- Services Hero Section -->
 <section
