@@ -303,7 +303,7 @@
         <button class="text-gray-700 hover:text-primary font-medium transition-colors flex items-center">
           About <i class="ri-arrow-down-s-line ml-1"></i>
         </button>
-        <div class="absolute left-0 hidden group-hover:block bg-white shadow-md rounded-md mt-2 w-40">
+        <div class="absolute left-0 hidden group-hover:block bg-white shadow-md rounded-md  w-40">
           <a href="about.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">About Us</a>
           <a href="ourteam.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Our Team</a>
         </div>
@@ -314,7 +314,7 @@
         <button class="text-gray-700 hover:text-primary font-medium transition-colors flex items-center">
           Services <i class="ri-arrow-down-s-line ml-1"></i>
         </button>
-        <div class="absolute left-0 hidden group-hover:block bg-white shadow-md rounded-md mt-2 w-56">
+        <div class="absolute left-0 hidden group-hover:block bg-white shadow-md rounded-md w-56">
           <a href="services.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Our Services</a>
           <a href="a&u.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Armed & Unarmed</a>
           <a href="petroling.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Patrolling & Supervising</a>
@@ -681,6 +681,8 @@
   </style>
 </head>
 <body>
+
+
   <!-- Hero Section -->
   <section id="home">
     <div id="hero-bg" class="hero-slide active"></div>
@@ -810,6 +812,7 @@
       padding: 6rem 0;
       background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
       position: relative;
+      overflow: hidden;
     }
     
     #about::before {
@@ -820,7 +823,7 @@
       right: 0;
       height: 500px;
       background: linear-gradient(135deg, rgba(27,54,93,0.03) 0%, rgba(16,30,51,0.05) 100%);
-      z-index: 0;
+      z-index: -1; /* FIX: Send background behind everything */
     }
     
     .container {
@@ -918,37 +921,6 @@
       box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.5);
     }
     
-    .shine-effect {
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: linear-gradient(
-        to right,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0.3) 50%,
-        rgba(255, 255, 255, 0) 100%
-      );
-      transform: rotate(30deg);
-      transition: all 0.7s;
-      opacity: 0;
-    }
-    
-    .city-btn:hover .shine-effect {
-      animation: shine 1.5s ease-out infinite;
-      opacity: 1;
-    }
-    
-    @keyframes shine {
-      0% {
-        left: -50%;
-      }
-      100% {
-        left: 100%;
-      }
-    }
-    
     /* Content Grid */
     .content-grid {
       display: grid;
@@ -971,6 +943,8 @@
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
       height: 450px;
       transition: all 0.3s ease;
+      position: relative;
+      z-index: 1; /* FIX: Map always above background */
     }
     
     .map-container:hover {
@@ -986,6 +960,8 @@
     /* Text Content */
     .text-content {
       padding: 0 1rem;
+      position: relative;
+      z-index: 1; /* FIX: Text above overlay */
     }
     
     @media (min-width: 992px) {
@@ -1058,88 +1034,6 @@
       color: #64748B;
     }
     
-    /* Badges */
-    .badges-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      justify-content: center;
-      margin-top: 2rem;
-    }
-    
-    @media (min-width: 768px) {
-      .badges-container {
-        justify-content: flex-start;
-      }
-    }
-    
-    .badge {
-      width: 80px;
-      height: 80px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .badge::before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(27, 54, 93, 0.1) 100%);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-    
-    .badge:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-    }
-    
-    .badge:hover::before {
-      opacity: 1;
-    }
-    
-    .badge img {
-      max-width: 60%;
-      max-height: 60%;
-      object-fit: contain;
-    }
-    
-    /* Animations */
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    
-    .fade-in {
-      animation: fadeIn 1s ease-out forwards;
-    }
-    
-    .delay-1 {
-      animation-delay: 0.2s;
-    }
-    
-    .delay-2 {
-      animation-delay: 0.4s;
-    }
-    
-    .delay-3 {
-      animation-delay: 0.6s;
-    }
-    
     /* Responsive Design */
     @media (max-width: 768px) {
       #about {
@@ -1169,6 +1063,8 @@
   </style>
 </head>
 <body>
+
+  
   <!-- About Section -->
   <section id="about">
     <div class="container">
@@ -1180,26 +1076,11 @@
 
       <!-- City Buttons -->
       <div class="city-buttons">
-        <button class="city-btn active" data-city="Indore">
-          <span class="btn-text">Indore</span>
-          <span class="shine-effect"></span>
-        </button>
-        <button class="city-btn" data-city="Bhopal">
-          <span class="btn-text">Bhopal</span>
-          <span class="shine-effect"></span>
-        </button>
-        <button class="city-btn" data-city="Ujjain">
-          <span class="btn-text">Ujjain</span>
-          <span class="shine-effect"></span>
-        </button>
-        <button class="city-btn" data-city="Gwalior">
-          <span class="btn-text">Gwalior</span>
-          <span class="shine-effect"></span>
-        </button>
-        <button class="city-btn" data-city="Jabalpur">
-          <span class="btn-text">Jabalpur</span>
-          <span class="shine-effect"></span>
-        </button>
+        <button class="city-btn active" data-city="Indore">Indore</button>
+        <button class="city-btn" data-city="Bhopal">Bhopal</button>
+        <button class="city-btn" data-city="Ujjain">Ujjain</button>
+        <button class="city-btn" data-city="Gwalior">Gwalior</button>
+        <button class="city-btn" data-city="Jabalpur">Jabalpur</button>
       </div>
 
       <!-- Content Grid -->
@@ -1221,36 +1102,11 @@
           <div class="trust-section">
             <h3>Why Trust Us</h3>
             <ul class="trust-list">
-              <li>
-                <i class="fas fa-shield-alt"></i>
-                <span>Over 15 years of industry experience</span>
-              </li>
-              <li>
-                <i class="fas fa-user-check"></i>
-                <span>Professionally trained and vetted security personnel</span>
-              </li>
-              <li>
-                <i class="fas fa-cogs"></i>
-                <span>Customized security solutions for every client</span>
-              </li>
-              <li>
-                <i class="fas fa-clock"></i>
-                <span>24/7 monitoring and rapid response capabilities</span>
-              </li>
+              <li><i class="fas fa-shield-alt"></i><span>Over 15 years of industry experience</span></li>
+              <li><i class="fas fa-user-check"></i><span>Professionally trained and vetted security personnel</span></li>
+              <li><i class="fas fa-cogs"></i><span>Customized security solutions for every client</span></li>
+              <li><i class="fas fa-clock"></i><span>24/7 monitoring and rapid response capabilities</span></li>
             </ul>
-          </div>
-
-          <!-- Badges -->
-          <div class="badges-container fade-in delay-3">
-            <div class="badge">
-              <img src="https://via.placeholder.com/80x80/1B365D/FFFFFF?text=ISO" alt="Security Certification">
-            </div>
-            <div class="badge">
-              <img src="https://via.placeholder.com/80x80/1B365D/FFFFFF?text=ASIS" alt="Industry Association">
-            </div>
-            <div class="badge">
-              <img src="https://via.placeholder.com/80x80/1B365D/FFFFFF?text=AWARD" alt="Excellence Award">
-            </div>
           </div>
         </div>
       </div>
@@ -1260,15 +1116,11 @@
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      // Initialize map
       const map = L.map("map").setView([22.9734, 78.6569], 5);
-      
-      // Add tile layer
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>',
+        attribution: '&copy; OpenStreetMap',
       }).addTo(map);
       
-      // Custom icon
       const securityIcon = L.icon({
         iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
         shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
@@ -1278,7 +1130,6 @@
         shadowSize: [41, 41]
       });
       
-      // City data
       const cities = [
         { name: "Indore", coords: [22.7196, 75.8577] },
         { name: "Bhopal", coords: [23.2599, 77.4126] },
@@ -1287,7 +1138,6 @@
         { name: "Jabalpur", coords: [23.1815, 79.9864] },
       ];
       
-      // Add markers
       const markers = {};
       cities.forEach((city) => {
         const marker = L.marker(city.coords, {icon: securityIcon})
@@ -1296,57 +1146,20 @@
         markers[city.name] = marker;
       });
       
-      // City button functionality
-      const cityButtons = document.querySelectorAll(".city-btn");
-      
-      cityButtons.forEach((btn) => {
+      document.querySelectorAll(".city-btn").forEach((btn) => {
         btn.addEventListener("click", () => {
-          // Remove active class from all buttons
-          cityButtons.forEach(b => b.classList.remove("active"));
-          
-          // Add active class to clicked button
+          document.querySelectorAll(".city-btn").forEach(b => b.classList.remove("active"));
           btn.classList.add("active");
-          
-          // Center map on selected city
           const cityName = btn.getAttribute("data-city");
           const marker = markers[cityName];
           if (marker) {
-            map.setView(marker.getLatLng(), 13, { 
-              animate: true,
-              duration: 1.5
-            });
-            setTimeout(() => {
-              marker.openPopup();
-            }, 1000);
+            map.setView(marker.getLatLng(), 13, { animate: true, duration: 1.5 });
+            setTimeout(() => marker.openPopup(), 1000);
           }
         });
       });
       
-      // Fix map size
-      setTimeout(() => {
-        map.invalidateSize();
-      }, 500);
-      
-      // Intersection Observer for animations
-      const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-      };
-      
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('fade-in');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, observerOptions);
-      
-      // Observe elements with fade-in class
-      document.querySelectorAll('.fade-in').forEach(el => {
-        observer.observe(el);
-      });
+      setTimeout(() => { map.invalidateSize(); }, 500);
     });
   </script>
 </body>
