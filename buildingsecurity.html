@@ -8,7 +8,215 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ronak Rudra Security & Management Services</title>
   <meta name="description"
+    content="Your trusted partner in security and <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Remix Icon -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ronak Rudra Security & Management Services</title>
+  <meta name="description"
     content="Your trusted partner in security and manpower solutions. We provide security guards, gunmen, bouncers, escort services, and more." />
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary: "#1B365D", secondary: "#FFD700" },
+          borderRadius: {
+            button: "8px",
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* ===== HEADER BLUR ===== */
+    .header {
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    /* ===== MOBILE MENU TRANSITION ===== */
+    .mobile-open {
+      display: block !important;
+      animation: slideDown 0.3s ease-in-out;
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50" style="overflow-x: hidden !important;">
+
+  <!-- Header -->
+  <header
+    class="header fixed w-full bg-white bg-opacity-90 shadow-md z-50 transition-all duration-300">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#" class="flex items-center">
+        <img src="images/WhatsApp_Image_2025-08-06_at_6.28.27_PM-removebg-preview.png" alt="Ronak Rudra Logo"
+          class="h-12 w-auto">
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center space-x-8 relative">
+        <a href="index.html" class="text-gray-700 hover:text-primary font-medium transition-colors">Home</a>
+
+        <!-- About Dropdown -->
+        <div class="group relative">
+          <button class="text-gray-700 hover:text-primary font-medium transition-colors flex items-center">
+            About <i class="ri-arrow-down-s-line ml-1"></i>
+          </button>
+          <div
+            class="absolute left-0 hidden group-hover:block bg-white shadow-md rounded-md w-40">
+            <a href="about.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">About Us</a>
+            <a href="ourteam.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Our Team</a>
+          </div>
+        </div>
+
+        <!-- Services Dropdown -->
+        <div class="group relative">
+          <button class="text-gray-700 hover:text-primary font-medium transition-colors flex items-center">
+            Services <i class="ri-arrow-down-s-line ml-1"></i>
+          </button>
+          <div
+            class="absolute left-0 hidden group-hover:block bg-white shadow-md rounded-md w-56">
+            <a href="services.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Our Services</a>
+            <a href="a&u.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Armed & Unarmed</a>
+            <a href="petroling.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Patrolling & Supervising</a>
+            <a href="gps.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">GPS & Monitoring</a>
+            <a href="cctv.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">CCTV & Monitoring</a>
+            <a href="buildingsecurity.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Building Security</a>
+            <a href="carparking.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Car Parking & Traffic</a>
+          </div>
+        </div>
+
+        <!-- Career & Contact -->
+        <a href="career.html" class="text-gray-700 hover:text-primary font-medium transition-colors">Career</a>
+        <a href="contect.html" class="text-gray-700 hover:text-primary font-medium transition-colors">Contact</a>
+
+        <a href="contect.html"
+          class="bg-[rgb(27,54,93)] text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap inline-block">
+          Get Protected Now
+        </a>
+      </nav>
+
+      <!-- Mobile Navigation Toggle -->
+      <div class="md:hidden w-10 h-10 flex items-center justify-center cursor-pointer"
+        id="mobile-menu-button">
+        <i class="ri-menu-line ri-2x text-primary"></i>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Menu -->
+    <div class="md:hidden bg-white absolute w-full left-0 top-full shadow-md hidden"
+      id="mobile-menu">
+      <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+
+        <a href="index.html"
+          class="text-gray-700 hover:text-primary font-medium py-2 transition-colors">Home</a>
+
+        <!-- About Dropdown Mobile -->
+        <div>
+          <button
+            class="w-full flex justify-between items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors"
+            onclick="toggleDropdown('about-dropdown')">
+            About <i class="ri-arrow-down-s-line"></i>
+          </button>
+          <div id="about-dropdown" class="hidden flex flex-col ml-4 space-y-2">
+            <a href="about.html" class="text-gray-600 hover:text-primary">About Us</a>
+            <a href="ourteam.html" class="text-gray-600 hover:text-primary">Our Team</a>
+          </div>
+        </div>
+
+        <!-- Services Dropdown Mobile -->
+        <div>
+          <button
+            class="w-full flex justify-between items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors"
+            onclick="toggleDropdown('services-dropdown')">
+            Services <i class="ri-arrow-down-s-line"></i>
+          </button>
+          <div id="services-dropdown" class="hidden flex flex-col ml-4 space-y-2">
+            <a href="services.html" class="text-gray-600 hover:text-primary">Our Services</a>
+            <a href="a&u.html" class="text-gray-600 hover:text-primary">Armed & Unarmed</a>
+            <a href="petroling.html" class="text-gray-600 hover:text-primary">Patrolling & Supervising</a>
+            <a href="gps.html" class="text-gray-600 hover:text-primary">GPS & Monitoring</a>
+            <a href="cctv.html" class="text-gray-600 hover:text-primary">CCTV & Monitoring</a>
+            <a href="buildingsecurity.html" class="text-gray-600 hover:text-primary">Building Security</a>
+            <a href="carparking.html" class="text-gray-600 hover:text-primary">Car Parking & Traffic</a>
+          </div>
+        </div>
+
+        <!-- Career & Contact (Mobile Order) -->
+        <a href="career.html"
+          class="text-gray-700 hover:text-primary font-medium py-2 transition-colors">Career</a>
+        <a href="contect.html"
+          class="text-gray-700 hover:text-primary font-medium py-2 transition-colors">Contact</a>
+
+        <a href="contect.html">
+          <button
+            class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">
+            Get Protected Now
+          </button>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- JS for Mobile Dropdown -->
+  <script>
+    const mobileMenuBtn = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const menuIcon = mobileMenuBtn.querySelector("i");
+
+    // Burger menu toggle
+    mobileMenuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("mobile-open");
+
+      // Change icon (menu <-> close)
+      if (mobileMenu.classList.contains("mobile-open")) {
+        menuIcon.classList.remove("ri-menu-line");
+        menuIcon.classList.add("ri-close-line");
+      } else {
+        menuIcon.classList.remove("ri-close-line");
+        menuIcon.classList.add("ri-menu-line");
+      }
+    });
+
+    // Dropdown toggle function
+    function toggleDropdown(id) {
+      document.getElementById(id).classList.toggle("hidden");
+    }
+  </script>s. We provide security guards, gunmen, bouncers, escort services, and more." />
   <script src="https://cdn.tailwindcss.com/3.4.16"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -214,6 +422,243 @@
 
 
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Building Security Services</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      background: url('https://images.unsplash.com/photo-1598970434795-0c54fe7c0648?w=1200') center/cover no-repeat;
+      height: 85vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(27, 54, 93, 0.7);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+    }
+
+    .btn-primary {
+      background: #ff914d;
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn-primary:hover {
+      background: #e67e2e;
+    }
+
+    /* Services Section */
+    .section {
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 50px;
+      color: #1b365d;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .service-card {
+      background: #f9f9f9;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+    }
+
+    .service-card i {
+      font-size: 3rem;
+      color: #ff914d;
+      margin-bottom: 15px;
+    }
+
+    /* Why Choose Us */
+    .why {
+      background: #f4f8ff;
+    }
+
+    .why ul {
+      list-style: none;
+      padding: 0;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .why ul li {
+      padding: 12px 0;
+      border-bottom: 1px solid #ddd;
+      font-size: 1.1rem;
+    }
+
+    /* Gallery */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 14px;
+      height: 220px;
+      object-fit: cover;
+      transition: 0.3s;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+    }
+
+    /* CTA Section */
+    .cta {
+      background: #1b365d;
+      color: #fff;
+      text-align: center;
+      padding: 70px 20px;
+    }
+
+    .cta h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Building Security Services</h1>
+      <p>Ensuring round-the-clock safety for your premises with professional guards, surveillance, and monitoring.</p>
+      <a href="#contact" class="btn-primary">Get a Quote</a>
+    </div>
+  </section>
+
+  <!-- Our Services -->
+  <section class="section">
+    <h2>Our Building Security Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <i class="ri-building-2-line"></i>
+        <h3>Residential Security</h3>
+        <p>Trained security staff to safeguard apartments, gated communities, and villas 24/7.</p>
+      </div>
+      <div class="service-card">
+        <i class="ri-community-line"></i>
+        <h3>Commercial Building Safety</h3>
+        <p>Protection for offices, corporate buildings, and business hubs with access control.</p>
+      </div>
+      <div class="service-card">
+        <i class="ri-cctv-line"></i>
+        <h3>Surveillance Monitoring</h3>
+        <p>Advanced CCTV setup and monitoring to ensure every corner is under watch.</p>
+      </div>
+      <div class="service-card">
+        <i class="ri-shield-check-line"></i>
+        <h3>Emergency Response</h3>
+        <p>Quick action teams for fire, theft, or emergencies with immediate support.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section why">
+    <h2>Why Choose Us</h2>
+    <ul>
+      <li>✔️ 24/7 trained guards for residential & commercial buildings</li>
+      <li>✔️ Modern surveillance & access control systems</li>
+      <li>✔️ Emergency & fire safety trained staff</li>
+      <li>✔️ Quick response team for crisis management</li>
+      <li>✔️ Trusted by top corporate and residential societies</li>
+    </ul>
+  </section>
+
+  <!-- Gallery -->
+  <section class="section">
+    <h2>Building Security in Action</h2>
+    <div class="gallery-grid">
+      <img src="https://images.unsplash.com/photo-1600341217276-33d5b1f3f6a3?w=600" alt="Security Guard">
+      <img src="https://images.unsplash.com/photo-1597754036304-4f63de6e6a3b?w=600" alt="CCTV Monitoring">
+      <img src="https://images.unsplash.com/photo-1625231310721-beb5c2b7e76f?w=600" alt="Building Security">
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta" id="contact">
+    <h2>Secure Your Building Today</h2>
+    <p>Get in touch with us for professional building security solutions tailored to your needs.</p>
+    <a href="#" class="btn-primary">Contact Us</a>
+  </section>
+
+</body>
+</html>
 
 
 

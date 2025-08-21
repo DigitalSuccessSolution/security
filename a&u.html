@@ -8,7 +8,215 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ronak Rudra Security & Management Services</title>
   <meta name="description"
+    content="Your trusted partner in security and <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Remix Icon -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ronak Rudra Security & Management Services</title>
+  <meta name="description"
     content="Your trusted partner in security and manpower solutions. We provide security guards, gunmen, bouncers, escort services, and more." />
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary: "#1B365D", secondary: "#FFD700" },
+          borderRadius: {
+            button: "8px",
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* ===== HEADER BLUR ===== */
+    .header {
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    /* ===== MOBILE MENU TRANSITION ===== */
+    .mobile-open {
+      display: block !important;
+      animation: slideDown 0.3s ease-in-out;
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50" style="overflow-x: hidden !important;">
+
+  <!-- Header -->
+  <header
+    class="header fixed w-full bg-white bg-opacity-90 shadow-md z-50 transition-all duration-300">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#" class="flex items-center">
+        <img src="images/WhatsApp_Image_2025-08-06_at_6.28.27_PM-removebg-preview.png" alt="Ronak Rudra Logo"
+          class="h-12 w-auto">
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center space-x-8 relative">
+        <a href="index.html" class="text-gray-700 hover:text-primary font-medium transition-colors">Home</a>
+
+        <!-- About Dropdown -->
+        <div class="group relative">
+          <button class="text-gray-700 hover:text-primary font-medium transition-colors flex items-center">
+            About <i class="ri-arrow-down-s-line ml-1"></i>
+          </button>
+          <div
+            class="absolute left-0 hidden group-hover:block bg-white shadow-md rounded-md w-40">
+            <a href="about.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">About Us</a>
+            <a href="ourteam.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Our Team</a>
+          </div>
+        </div>
+
+        <!-- Services Dropdown -->
+        <div class="group relative">
+          <button class="text-gray-700 hover:text-primary font-medium transition-colors flex items-center">
+            Services <i class="ri-arrow-down-s-line ml-1"></i>
+          </button>
+          <div
+            class="absolute left-0 hidden group-hover:block bg-white shadow-md rounded-md w-56">
+            <a href="services.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Our Services</a>
+            <a href="a&u.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Armed & Unarmed</a>
+            <a href="petroling.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Patrolling & Supervising</a>
+            <a href="gps.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">GPS & Monitoring</a>
+            <a href="cctv.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">CCTV & Monitoring</a>
+            <a href="buildingsecurity.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Building Security</a>
+            <a href="carparking.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Car Parking & Traffic</a>
+          </div>
+        </div>
+
+        <!-- Career & Contact -->
+        <a href="career.html" class="text-gray-700 hover:text-primary font-medium transition-colors">Career</a>
+        <a href="contect.html" class="text-gray-700 hover:text-primary font-medium transition-colors">Contact</a>
+
+        <a href="contect.html"
+          class="bg-[rgb(27,54,93)] text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap inline-block">
+          Get Protected Now
+        </a>
+      </nav>
+
+      <!-- Mobile Navigation Toggle -->
+      <div class="md:hidden w-10 h-10 flex items-center justify-center cursor-pointer"
+        id="mobile-menu-button">
+        <i class="ri-menu-line ri-2x text-primary"></i>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Menu -->
+    <div class="md:hidden bg-white absolute w-full left-0 top-full shadow-md hidden"
+      id="mobile-menu">
+      <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+
+        <a href="index.html"
+          class="text-gray-700 hover:text-primary font-medium py-2 transition-colors">Home</a>
+
+        <!-- About Dropdown Mobile -->
+        <div>
+          <button
+            class="w-full flex justify-between items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors"
+            onclick="toggleDropdown('about-dropdown')">
+            About <i class="ri-arrow-down-s-line"></i>
+          </button>
+          <div id="about-dropdown" class="hidden flex flex-col ml-4 space-y-2">
+            <a href="about.html" class="text-gray-600 hover:text-primary">About Us</a>
+            <a href="ourteam.html" class="text-gray-600 hover:text-primary">Our Team</a>
+          </div>
+        </div>
+
+        <!-- Services Dropdown Mobile -->
+        <div>
+          <button
+            class="w-full flex justify-between items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors"
+            onclick="toggleDropdown('services-dropdown')">
+            Services <i class="ri-arrow-down-s-line"></i>
+          </button>
+          <div id="services-dropdown" class="hidden flex flex-col ml-4 space-y-2">
+            <a href="services.html" class="text-gray-600 hover:text-primary">Our Services</a>
+            <a href="a&u.html" class="text-gray-600 hover:text-primary">Armed & Unarmed</a>
+            <a href="petroling.html" class="text-gray-600 hover:text-primary">Patrolling & Supervising</a>
+            <a href="gps.html" class="text-gray-600 hover:text-primary">GPS & Monitoring</a>
+            <a href="cctv.html" class="text-gray-600 hover:text-primary">CCTV & Monitoring</a>
+            <a href="buildingsecurity.html" class="text-gray-600 hover:text-primary">Building Security</a>
+            <a href="carparking.html" class="text-gray-600 hover:text-primary">Car Parking & Traffic</a>
+          </div>
+        </div>
+
+        <!-- Career & Contact (Mobile Order) -->
+        <a href="career.html"
+          class="text-gray-700 hover:text-primary font-medium py-2 transition-colors">Career</a>
+        <a href="contect.html"
+          class="text-gray-700 hover:text-primary font-medium py-2 transition-colors">Contact</a>
+
+        <a href="contect.html">
+          <button
+            class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">
+            Get Protected Now
+          </button>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- JS for Mobile Dropdown -->
+  <script>
+    const mobileMenuBtn = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const menuIcon = mobileMenuBtn.querySelector("i");
+
+    // Burger menu toggle
+    mobileMenuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("mobile-open");
+
+      // Change icon (menu <-> close)
+      if (mobileMenu.classList.contains("mobile-open")) {
+        menuIcon.classList.remove("ri-menu-line");
+        menuIcon.classList.add("ri-close-line");
+      } else {
+        menuIcon.classList.remove("ri-close-line");
+        menuIcon.classList.add("ri-menu-line");
+      }
+    });
+
+    // Dropdown toggle function
+    function toggleDropdown(id) {
+      document.getElementById(id).classList.toggle("hidden");
+    }
+  </script>s. We provide security guards, gunmen, bouncers, escort services, and more." />
   <script src="https://cdn.tailwindcss.com/3.4.16"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -212,6 +420,737 @@
 
 
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Security Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        :root {
+            --primary-blue: #0a1a35;
+            --secondary-blue: #1b365d;
+            --accent-orange: #ff914d;
+            --light-blue: #4a7bcc;
+            --light-gray: #f8fafc;
+            --dark-text: #1e293b;
+            --light-text: #64748b;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            overflow-x: hidden;
+            color: var(--dark-text);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(10,26,53,0.9) 0%, rgba(27,54,93,0.85) 100%), 
+                        url('https://images.unsplash.com/photo-1600102013855-395f42d217d3?q=80&w=1600&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+        
+        .hero-cta {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent-orange) 0%, #ff7a30 100%);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(255,145,77,0.3);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+        }
+        
+        .hero-cta:hover::before {
+            left: 100%;
+        }
+        
+        .hero-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(255,145,77,0.4);
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background: var(--light-gray);
+            position: relative;
+        }
+        
+        .services::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231b365d' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--light-text);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 16px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 0;
+            background: linear-gradient(to bottom, var(--accent-orange), var(--secondary-blue));
+            transition: height 0.5s ease;
+        }
+        
+        .service-card:hover::before {
+            height: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 25px;
+            display: inline-block;
+            background: linear-gradient(135deg, var(--secondary-blue) 0%, var(--primary-blue) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .service-title {
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            font-weight: 600;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .service-description {
+            color: var(--light-text);
+            line-height: 1.6;
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* Gallery Section */
+        .gallery {
+            padding: 100px 0;
+            background: white;
+            position: relative;
+        }
+        
+        .gallery-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .gallery-title {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .gallery-subtitle {
+            font-size: 1.1rem;
+            color: var(--light-text);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .gallery-item {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            height: 280px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        
+        .gallery-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover .gallery-image {
+            transform: scale(1.05);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 30px 20px 20px;
+            background: linear-gradient(to top, rgba(10,26,53,0.9), transparent);
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        
+        .gallery-caption {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .gallery-desc {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        /* Training Section */
+        .training {
+            padding: 100px 0;
+            background: linear-gradient(135deg, rgba(248,250,252,0.9) 0%, rgba(241,245,249,0.9) 100%), 
+                        url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231b365d' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            position: relative;
+        }
+        
+        .training-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .training-info h2 {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+        
+        .training-info p {
+            font-size: 1.1rem;
+            color: var(--light-text);
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+        
+        .training-list {
+            list-style: none;
+        }
+        
+        .training-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            color: var(--dark-text);
+        }
+        
+        .training-list i {
+            color: var(--accent-orange);
+            font-size: 1.5rem;
+            margin-right: 15px;
+            background: rgba(255,145,77,0.1);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .training-image {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            position: relative;
+        }
+        
+        .training-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .training-image:hover img {
+            transform: scale(1.03);
+        }
+        
+        /* Why Choose Us */
+        .why-choose {
+            padding: 100px 0;
+            background: white;
+            position: relative;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background: var(--light-gray);
+            border-radius: 16px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, var(--accent-orange), var(--secondary-blue));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .feature-card:hover::before {
+            opacity: 1;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 25px;
+            display: inline-block;
+            background: linear-gradient(135deg, var(--secondary-blue) 0%, var(--primary-blue) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .feature-title {
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .feature-description {
+            color: var(--light-text);
+            line-height: 1.6;
+        }
+        
+        /* CTA Section */
+        .cta {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        
+        .cta-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .cta-text {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: var(--accent-orange);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(255,145,77,0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background: white;
+            color: var(--primary-blue);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(255,145,77,0.4);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero-title {
+                font-size: 2.8rem;
+            }
+            
+            .training-content {
+                gap: 40px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.3rem;
+            }
+            
+            .training-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .training-image {
+                order: -1;
+            }
+            
+            .section-title, .gallery-title, .training-info h2, .cta-title {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .services-grid, .features-grid, .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title, .gallery-title, .training-info h2, .cta-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Armed & Unarmed Security Services</h1>
+            <p class="hero-subtitle">Professional, disciplined, and reliable security solutions tailored to your needs. Our elite team provides premium protection for your business and personal assets.</p>
+            <a href="#services" class="hero-cta">Explore Services</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Armed & Unarmed Security Services</h2>
+                <p class="section-subtitle">We provide highly trained armed and unarmed guards to ensure maximum safety for your premises. Our services are customized based on the level of protection you require.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="ri-shield-check-line service-icon"></i>
+                    <h3 class="service-title">Armed Guards</h3>
+                    <p class="service-description">Licensed professionals trained to handle advanced security threats with precision and discretion.</p>
+                </div>
+                
+                <div class="service-card">
+                    <i class="ri-shield-user-line service-icon"></i>
+                    <h3 class="service-title">Unarmed Guards</h3>
+                    <p class="service-description">Smart, disciplined personnel for crowd control, access monitoring, and preventive security.</p>
+                </div>
+                
+                <div class="service-card">
+                    <i class="ri-community-line service-icon"></i>
+                    <h3 class="service-title">Custom Security Plans</h3>
+                    <p class="service-description">Tailored solutions to meet residential, commercial, or industrial security needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <div class="container">
+            <div class="gallery-header">
+                <h2 class="gallery-title">Our Security in Action</h2>
+                <p class="gallery-subtitle">Take a look at our <span style="color: var(--accent-orange); font-weight: 600;">Armed</span> and <span style="color: var(--secondary-blue); font-weight: 600;">Unarmed</span> security officers on duty, providing professional protection services.</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1599940824399-b87987ceb72a?w=800" alt="Armed Guard" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">Armed Protection</div>
+                        <div class="gallery-desc">Highly trained professionals ensuring maximum security</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1581091226825-c6a89f1d2f2b?w=800" alt="Unarmed Guard" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">Unarmed Security</div>
+                        <div class="gallery-desc">Professional presence for access control and monitoring</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1628624747180-3f75f1a4bb7b?w=800" alt="Security Patrol" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">Patrol Services</div>
+                        <div class="gallery-desc">Regular monitoring and rapid response capabilities</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Section -->
+    <section class="training">
+        <div class="container">
+            <div class="training-content">
+                <div class="training-info">
+                    <h2>Trained & Certified Professionals</h2>
+                    <p>Our guards undergo rigorous training programs in physical fitness, first aid, conflict management, and situational awareness to ensure the highest level of professional service.</p>
+                    
+                    <ul class="training-list">
+                        <li><i class="ri-checkbox-circle-line"></i> Licensed & Certified</li>
+                        <li><i class="ri-checkbox-circle-line"></i> Regular Firearms Practice</li>
+                        <li><i class="ri-checkbox-circle-line"></i> Crowd & Crisis Management</li>
+                        <li><i class="ri-checkbox-circle-line"></i> Advanced Tactical Training</li>
+                        <li><i class="ri-checkbox-circle-line"></i> Emergency Response Preparedness</li>
+                    </ul>
+                </div>
+                
+                <div class="training-image">
+                    <img src="https://images.unsplash.com/photo-1630382079051-65a38b917939?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHBvbGljZSUyMHBldHJvbGluZ3xlbnwwfHwwfHx8MA%3D%3D" alt="Security Training">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose Our Security Services?</h2>
+                <p class="section-subtitle">We stand out from the competition with our commitment to excellence, rigorous training standards, and client-focused approach to security solutions.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="ri-user-star-line feature-icon"></i>
+                    <h3 class="feature-title">Experienced Staff</h3>
+                    <p class="feature-description">Over 10+ years of industry experience in corporate, personal, and event security with proven track record.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="ri-timer-line feature-icon"></i>
+                    <h3 class="feature-title">24/7 Availability</h3>
+                    <p class="feature-description">Round-the-clock services with immediate response teams ready to deploy at a moment's notice.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="ri-secure-payment-line feature-icon"></i>
+                    <h3 class="feature-title">Affordable Plans</h3>
+                    <p class="feature-description">Flexible security packages suitable for businesses of all sizes and residential properties.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Need Professional Security Services?</h2>
+                <p class="cta-text">Get in touch with us today to hire trained armed & unarmed security personnel. Our team will provide a customized security assessment and quote tailored to your specific needs.</p>
+                <a href="contact.html" class="cta-button">Request a Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Simple animation on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedElements = document.querySelectorAll('.service-card, .feature-card, .gallery-item, .training-image');
+            
+            animatedElements.forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            });
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            animatedElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>
 
 
 
