@@ -390,14 +390,154 @@
 </head>
 <body>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="content">
-      <h1>Premium CCTV & Monitoring Services</h1>
-      <p>24/7 surveillance solutions to protect your business and home with advanced monitoring systems.</p>
-      <a href="#contact" class="btn-primary">Get a Quote</a>
+<section class="hero-section" style="position: relative; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #0a0e17 0%, #1a2639 100%); padding: 0 20px; min-height: 100vh; overflow: hidden;">
+    <!-- Animated decorative elements -->
+    <div class="camera-animation" style="position: absolute; width: 280px; height: 180px; top: 50px; right: 5%; opacity: 0.7; animation: float 6s ease-in-out infinite;">
+        <i class="fas fa-video" style="font-size: 120px; color: rgba(52, 152, 219, 0.3);"></i>
     </div>
-  </section>
+    <div class="shield-animation" style="position: absolute; width: 200px; height: 200px; bottom: 80px; left: 8%; opacity: 0.6; animation: pulse 4s ease-in-out infinite;">
+        <i class="fas fa-shield-alt" style="font-size: 140px; color: rgba(46, 204, 113, 0.3);"></i>
+    </div>
+
+    <div class="content" style="position: relative; z-index: 2; text-align: center; width: 100%; max-width: 900px; padding: 40px; background: rgba(13, 19, 33, 0.7); backdrop-filter: blur(10px); border-radius: 20px; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); animation: fadeIn 1.5s ease-out; transform: translateY(0); transition: transform 0.3s ease;">
+        <h1 style="font-size: 3.5rem; font-weight: 700; margin-bottom: 20px; margin-top: 100px; background: linear-gradient(135deg, #ffffff 0%, #a0e7ff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); letter-spacing: 1px;">Premium CCTV & Monitoring Services</h1>
+        <p style="font-size: 1.3rem; margin-bottom: 30px; color: #d6eaff; line-height: 1.6; max-width: 700px; margin-left: auto; margin-right: auto;">24/7 surveillance solutions to protect your business and home with advanced monitoring systems and expert security professionals.</p>
+        <a href="contect.html#c2" class="btn-primary" style="display: inline-block; padding: 16px 40px; background: linear-gradient(135deg, #2980b9 0%, #2c3e50 100%); color: white; text-decoration: none; border-radius: 50px; font-weight: 600; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1.5px; transition: all 0.3s ease; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); position: relative; overflow: hidden;">
+            Get a Quote
+        </a>
+        
+        <div class="security-badges" style="display: flex; justify-content: center; gap: 30px; margin-top: 40px; flex-wrap: wrap;">
+            <div class="badge" style="display: flex; flex-direction: column; align-items: center; background: rgba(255, 255, 255, 0.05); padding: 15px; border-radius: 15px; width: 120px; backdrop-filter: blur(5px); border: 1px solid rgba(255, 255, 255, 0.1); transition: transform 0.3s ease; margin-bottom: 20px;">
+                <i class="fas fa-lock" style="font-size: 2rem; margin-bottom: 10px; color: #3498db;"></i>
+                <span style="font-size: 0.9rem; color: #a0e7ff; text-align: center;">Encrypted Storage</span>
+            </div>
+            <div class="badge" style="display: flex; flex-direction: column; align-items: center; background: rgba(255, 255, 255, 0.05); padding: 15px; border-radius: 15px; width: 120px; backdrop-filter: blur(5px); border: 1px solid rgba(255, 255, 255, 0.1); transition: transform 0.3s ease; margin-bottom: 20px;">
+                <i class="fas fa-certificate" style="font-size: 2rem; margin-bottom: 10px; color: #3498db;"></i>
+                <span style="font-size: 0.9rem; color: #a0e7ff; text-align: center;">Certified Experts</span>
+            </div>
+            <div class="badge" style="display: flex; flex-direction: column; align-items: center; background: rgba(255, 255, 255, 0.05); padding: 15px; border-radius: 15px; width: 120px; backdrop-filter: blur(5px); border: 1px solid rgba(255, 255, 255, 0.1); transition: transform 0.3s ease; margin-bottom: 20px;">
+                <i class="fas fa-headset" style="font-size: 2rem; margin-bottom: 10px; color: #3498db;"></i>
+                <span style="font-size: 0.9rem; color: #a0e7ff; text-align: center;">24/7 Support</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Hero section */
+    .hero-section {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #0a0e17 0%, #1a2639 100%);
+        padding: 0 20px;
+        min-height: 100vh; /* Ensure full screen height on all devices */
+        overflow: hidden;
+    }
+
+    .content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        width: 100%;
+        max-width: 900px;
+        padding: 40px;
+        background: rgba(13, 19, 33, 0.7);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        animation: fadeIn 1.5s ease-out;
+        transform: translateY(0);
+        transition: transform 0.3s ease;
+        overflow: visible;
+    }
+
+    /* Keyframe Animations */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Media Queries for Mobile Responsiveness */
+    @media (max-width: 992px) {
+        .hero-section {
+            min-height: auto; /* Adjust height for smaller screens */
+            padding: 60px 20px;
+        }
+
+        .content {
+            padding: 30px;
+            max-width: 90%;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .content {
+            padding: 25px;
+            max-width: 85%;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+        }
+
+        .security-badges {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .badge {
+            width: 100%;
+            max-width: 180px;
+            margin-bottom: 15px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .hero-section {
+            min-height: auto;  /* Adjust for smaller screens */
+            padding: 40px 20px;
+        }
+
+        .content {
+            padding: 20px;
+            max-width: 95%;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        .badge {
+            width: 100%;
+            max-width: 150px;
+            margin-bottom: 15px;
+        }
+    }
+</style>
+
+
+
+
+
 
   <!-- About -->
   <section>

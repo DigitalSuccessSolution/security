@@ -643,108 +643,211 @@
   </div>
 </section>
 
-<section class="about-us-section" style="
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 100px 50px;
-    background-color: #e0e0e0;
-    font-family: Arial, sans-serif;
-">
-    <div class="about-container" style="
-        display: flex;
-        width: 100%;
-        max-width: 1200px;
-        background-color: #f0f0f0;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        padding: 40px;
-        box-sizing: border-box;
-    ">
-        <div class="image-wrapper" style="
-            flex: 1;
-            padding-right: 40px;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Rudra Group Security</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        
+        .about-us-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 20px;
+            background-color: #e0e0e0;
+            min-height: 100vh;
+        }
+        
+        .about-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 1200px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 30px;
+            box-sizing: border-box;
+        }
+        
+        .image-wrapper {
+            padding: 0;
             display: flex;
             align-items: center;
             justify-content: center;
-        ">
-            <img src="images/about.jpeg" alt="About Us" style="
-                width: 100%;
-                height: auto;
-                border-radius: 10px;
-                object-fit: cover;
-                max-width: 500px;
-            ">
-        </div>
-        <div class="text-wrapper" style="
-            flex: 1;
+            margin-bottom: 30px;
+        }
+        
+        .image-wrapper img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+            max-width: 500px;
+        }
+        
+        .text-wrapper {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: flex-start;
-        ">
-            <h2 class="about-heading" style="
-                font-size: 4em;
-                font-weight: bold;
-                color: #555;
-                margin: 0;
-                padding: 0;
-            ">
-                ABOUT US
-            </h2>
-            <div class="about-content" style="
-                margin-top: 30px;
-                color: #555;
+        }
+        
+        .about-heading {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #555;
+            margin: 0 0 20px 0;
+            padding: 0;
+            text-align: center;
+            width: 100%;
+        }
+        
+        .about-content {
+            margin-top: 0;
+            color: #555;
+            font-size: 1em;
+            line-height: 1.6;
+            width: 100%;
+        }
+        
+        .about-content h1 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .about-content p {
+            margin-bottom: 15px;
+        }
+        
+        .certification-badge {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            font-weight: bold;
+            color: #ff7e33;
+        }
+        
+        .social-icons {
+            display: flex;
+            margin-top: 30px;
+            justify-content: center;
+            width: 100%;
+        }
+        
+        .social-icons a {
+            color: #555;
+            font-size: 1.5em;
+            margin: 0 15px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            color: #ff7e33;
+        }
+        
+        /* Tablet view */
+        @media (min-width: 768px) {
+            .about-container {
+                padding: 40px;
+            }
+            
+            .about-heading {
+                font-size: 3em;
+                text-align: left;
+            }
+            
+            .about-content {
                 font-size: 1.1em;
-                line-height: 1.6;
-            ">
-                <h1>Rudra Group Security Pvt. Ltd. (RGSPL)</h1>
-<p>
-    <strong>Rudra Group Security Pvt. Ltd. (RGSPL)</strong> is one of the leading security service providers in India. With over 15 years of experience and a highly trained staff, RGSPL was founded in 2006 and is among the first security agencies in India to be awarded the ISO 9001:2015 certification.
-</p>
-<p>
-    We offer security solutions for Event Management, Retail Management, Electronic Surveillance, K9 Squads, Cash Vans, and more. Our expert team is equipped to handle all your security needs with professionalism and efficiency.
-</p>
-<p>
-    Our team of qualified security professionals is committed to delivering top-tier security services, ensuring peace of mind and industry-leading standards.
-</p>
-<div class="certification-badge">
-  <i class="fas fa-certificate" style="color: #ff7e33; margin-right: 10px;"></i>
-  ISO 9001:2015 Certified Organization
-</div>
+            }
+            
+            .social-icons {
+                justify-content: flex-start;
+            }
+        }
+        
+        /* Desktop view */
+        @media (min-width: 992px) {
+            .about-us-section {
+                padding: 100px 50px;
+            }
+            
+            .about-container {
+                flex-direction: row;
+                padding: 40px;
+            }
+            
+            .image-wrapper {
+                flex: 1;
+                padding-right: 40px;
+                margin-bottom: 0;
+            }
+            
+            .text-wrapper {
+                flex: 1;
+            }
+            
+            .about-heading {
+                font-size: 4em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="about-us-section">
+        <div class="about-container">
+            <div class="image-wrapper">
+                <img src="images/about.jpeg" alt="About Us">
             </div>
-            <div class="social-icons" style="
-                display: flex;
-                margin-top: 30px;
-            ">
-                <a href="#" style="
-                    color: #555;
-                    font-size: 1.5em;
-                    margin-right: 20px;
-                    text-decoration: none;
-                ">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#" style="
-                    color: #555;
-                    font-size: 1.5em;
-                    margin-right: 20px;
-                    text-decoration: none;
-                ">
-                    <i class="fab fa-facebook"></i>
-                </a>
-                <a href="#" style="
-                    color: #555;
-                    font-size: 1.5em;
-                    text-decoration: none;
-                ">
-                    <i class="fab fa-instagram"></i>
-                </a>
+            <div class="text-wrapper">
+                <h2 class="about-heading">ABOUT US</h2>
+                <div class="about-content">
+                    <h1>Rudra Group Security Pvt. Ltd. (RGSPL)</h1>
+                    <p>
+                        <strong>Rudra Group Security Pvt. Ltd. (RGSPL)</strong> is one of the leading security service providers in India. With over 15 years of experience and a highly trained staff, RGSPL was founded in 2006 and is among the first security agencies in India to be awarded the ISO 9001:2015 certification.
+                    </p>
+                    <p>
+                        We offer security solutions for Event Management, Retail Management, Electronic Surveillance, K9 Squads, Cash Vans, and more. Our expert team is equipped to handle all your security needs with professionalism and efficiency.
+                    </p>
+                    <p>
+                        Our team of qualified security professionals is committed to delivering top-tier security services, ensuring peace of mind and industry-leading standards.
+                    </p>
+                    <div class="certification-badge">
+                        <i class="fas fa-certificate" style="color: #ff7e33; margin-right: 10px;"></i>
+                        ISO 9001:2015 Certified Organization
+                    </div>
+                </div>
+                <div class="social-icons">
+                    <a href="#">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-
+    </section>
+</body>
+</html>
 
 <!-- Modern Premium About Section -->
 <section style="width: 100%; padding: 80px 20px; box-sizing: border-box; font-family: 'Segoe UI', 'Inter', sans-serif; color: #000; background-color: #ffffff; position: relative; overflow: hidden;">
@@ -963,7 +1066,7 @@ Thank you for your trust and support. I look forward to working with all of you 
     <p class="section-subtitle">Partnering with industry leaders and innovators across sectors</p>
   </div>
 
-  <!-- Logo Marquee with Manual Scroll and Auto Scroll -->
+  <!-- Logo Marquee -->
   <div class="logo-marquee-container">
     <div class="logo-marquee-track">
       <!-- Client Logos - Duplicated for seamless loop -->
@@ -1057,14 +1160,15 @@ Thank you for your trust and support. I look forward to working with all of you 
     position: relative;
     margin: 3rem 0;
     padding: 2rem 0;
-    overflow-x: auto; /* Enable horizontal scrolling */
-    white-space: nowrap; /* Prevent wrapping */
+    overflow: hidden;
   }
 
   .logo-marquee-track {
-    display: inline-flex;
+    display: flex;
+    align-items: center;
     gap: 3rem;
     animation: scroll 30s linear infinite;
+    will-change: transform;
   }
 
   .logo-item {
@@ -1218,41 +1322,6 @@ Thank you for your trust and support. I look forward to working with all of you 
 </style>
 
 <script>
-  // Intersection Observer for count animation
-  document.addEventListener('DOMContentLoaded', function() {
-    const statCards = document.querySelectorAll('.stat-card');
-    
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          animateValue(entry.target.querySelector('.stat-value'));
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.5 });
-    
-    statCards.forEach(card => {
-      observer.observe(card);
-    });
-    
-    function animateValue(element) {
-      const target = parseInt(element.getAttribute('data-count'));
-      const duration = 2000;
-      const start = 0;
-      const increment = target / (duration / 16);
-      let current = start;
-      
-      const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-          clearInterval(timer);
-          current = target;
-        }
-        element.textContent = Math.floor(current) + (element.getAttribute('data-count') > 99 ? '+' : '');
-      }, 16);
-    }
-  });
-</script>
   // Intersection Observer for count animation
   document.addEventListener('DOMContentLoaded', function() {
     const statCards = document.querySelectorAll('.stat-card');
