@@ -963,7 +963,7 @@ Thank you for your trust and support. I look forward to working with all of you 
     <p class="section-subtitle">Partnering with industry leaders and innovators across sectors</p>
   </div>
 
-  <!-- Logo Marquee -->
+  <!-- Logo Marquee with Manual Scroll and Auto Scroll -->
   <div class="logo-marquee-container">
     <div class="logo-marquee-track">
       <!-- Client Logos - Duplicated for seamless loop -->
@@ -1057,15 +1057,14 @@ Thank you for your trust and support. I look forward to working with all of you 
     position: relative;
     margin: 3rem 0;
     padding: 2rem 0;
-    overflow: hidden;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping */
   }
 
   .logo-marquee-track {
-    display: flex;
-    align-items: center;
+    display: inline-flex;
     gap: 3rem;
     animation: scroll 30s linear infinite;
-    will-change: transform;
   }
 
   .logo-item {
@@ -1219,6 +1218,41 @@ Thank you for your trust and support. I look forward to working with all of you 
 </style>
 
 <script>
+  // Intersection Observer for count animation
+  document.addEventListener('DOMContentLoaded', function() {
+    const statCards = document.querySelectorAll('.stat-card');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateValue(entry.target.querySelector('.stat-value'));
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    
+    statCards.forEach(card => {
+      observer.observe(card);
+    });
+    
+    function animateValue(element) {
+      const target = parseInt(element.getAttribute('data-count'));
+      const duration = 2000;
+      const start = 0;
+      const increment = target / (duration / 16);
+      let current = start;
+      
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          clearInterval(timer);
+          current = target;
+        }
+        element.textContent = Math.floor(current) + (element.getAttribute('data-count') > 99 ? '+' : '');
+      }, 16);
+    }
+  });
+</script>
   // Intersection Observer for count animation
   document.addEventListener('DOMContentLoaded', function() {
     const statCards = document.querySelectorAll('.stat-card');
