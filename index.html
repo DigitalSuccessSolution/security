@@ -1961,7 +1961,7 @@
     <p class="section-subtitle">Partnering with industry leaders and innovators across sectors</p>
   </div>
 
-  <!-- Logo Marquee -->
+  <!-- Logo Marquee with Manual Scroll and Auto Scroll -->
   <div class="logo-marquee-container">
     <div class="logo-marquee-track">
       <!-- Client Logos - Duplicated for seamless loop -->
@@ -2055,15 +2055,14 @@
     position: relative;
     margin: 3rem 0;
     padding: 2rem 0;
-    overflow: hidden;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping */
   }
 
   .logo-marquee-track {
-    display: flex;
-    align-items: center;
+    display: inline-flex;
     gap: 3rem;
     animation: scroll 30s linear infinite;
-    will-change: transform;
   }
 
   .logo-item {
@@ -2252,6 +2251,7 @@
     }
   });
 </script>
+
 
 
   <!-- Contact Section -->
