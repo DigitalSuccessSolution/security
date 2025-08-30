@@ -633,10 +633,10 @@
     <h1>Safeguarding what matters most — your people, your property, your peace of mind.</h1>
     <p>Trusted protection, driven by experience and technology.</p>
     <div class="hero-cta">
-      <a href="#services" class="btn-primary">
+      <a href="services.html" class="btn-primary">
         <i class="fas fa-shield-alt"></i> Our Services
       </a>
-      <a href="#contact" class="btn-secondary">
+      <a href="contect.html" class="btn-secondary">
         <i class="fas fa-phone"></i> Contact Us
       </a>
     </div>
@@ -667,7 +667,84 @@
   </div>
 </section>
 
+<style>
+  /* Default styling for larger screens (desktop and tablets) */
+.content-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 150px;
+}
 
+.image-box {
+  flex: 1;
+  padding: 20px;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.text-box {
+  flex: 1;
+  padding: 20px;
+}
+
+.certification-badge {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Mobile-specific styles */
+@media only screen and (max-width: 768px) {
+  .content-section {
+    flex-direction: column;
+    padding-top: 100px;
+  }
+
+  .image-box {
+    margin-bottom: 20px;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: auto;
+  }
+
+  .text-box {
+    padding: 15px;
+  }
+
+  .certification-badge {
+    font-size: 12px;
+    margin-top: 15px;
+  }
+}
+
+/* Extra small screen (phones in portrait mode) */
+@media only screen and (max-width: 480px) {
+  .content-section {
+    padding-top: 80px;
+  }
+
+  .image-box {
+    margin-bottom: 15px;
+  }
+
+  .text-box {
+    padding: 10px;
+  }
+
+  .certification-badge {
+    font-size: 11px;
+  }
+}
+
+</style>
 
 
 <!-- Modern Premium About Section -->
@@ -713,7 +790,7 @@
   <div class="flex-responsive" style="position: relative; z-index: 2; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 60px; margin-bottom: 80px; padding: 40px; background: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(249, 250, 251, 0.9) 100%); border-radius: 16px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);">
     <div class="image-container" style="flex: 1; min-width: 300px; max-width: 400px; position: relative;">
       <div style="width: 100%; padding-top: 100%; position: relative; overflow: hidden; border-radius: 12px; box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);">
-        <img src="/imgabout/jeevansingh.jpeg" alt="Mr. Jeevan Singh - Managing Director" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+        <img src="images/about.jpeg" alt="Mr. Jeevan Singh - Managing Director" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
       </div>
       <div style="position: absolute; bottom: -15px; right: -15px; width: 70px; height: 70px; background-color: #1b365d; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);">
         <span style="font-weight: bold;">01</span>
@@ -783,13 +860,16 @@
     </div>
     <div style="flex: 1; min-width: 300px; max-width: 600px;" class="text-content">
       <div style="font-size: 12px; letter-spacing: 2px; color: #ff7e33; text-transform: uppercase; margin-bottom: 12px; font-weight: 600;">
-        General Manager
+      new diretor
       </div>
       <h3 style="font-size: 24px; color: #1b365d; margin: 0 0 20px 0; font-weight: 700;">
-        Mr. DEEPNARAYAN DWIVEDI
+        Mr. new 
       </h3>
       <p style="font-size: 16px; color: #4a5568; line-height: 1.8; margin-bottom: 25px;">
-        An officer from Combat Arm of Indian Army with two & a half decades of service. Long experience in insurgent areas and tenure with National Security Guard, India's premier security organization. Expert in security audit and analysis with international experience in high-level security systems.
+I am honored and excited to step into the role of Director at [Company Name]. As a young leader, I bring fresh ideas, energy, and a strong commitment to continuing the legacy of excellence that has been built over the years.
+Taking over this business is both a responsibility and an opportunity. I am dedicated to driving innovation, enhancing our services, and exploring new avenues for growth. My vision is to build on our strong foundation, leverage modern technology, and foster a dynamic, inclusive culture that empowers our team and delivers exceptional value to our clients.
+I believe in the power of teamwork, transparency, and continuous improvement. Together, we will navigate the future with confidence, adapt to new challenges, and achieve new heights.
+Thank you for your trust and support. I look forward to working with all of you as we embark on this exciting new chapter.
       </p>
       <div style="display: flex; align-items: center;">
         <div style="width: 30px; height: 2px; background-color: #ff7e33; margin-right: 15px;"></div>
@@ -1412,7 +1492,9 @@
           <div class="contact-item">
             <i class="fas fa-map-marker-alt"></i>
             <span>
+              <span>
               Reg. Off.: 344, New Vaibhav Laxmi Nagar,<br>Opp. Velocity, Indore (M.P.)
+            </span>,<br>Opp. Velocity, Indore (M.P.)
             </span>
           </div>
           <div class="contact-item">
@@ -1429,8 +1511,8 @@
             <i class="fas fa-phone-alt"></i>
             <div class="phone-numbers">
               <a href="tel:+919111398999">+91 9111398999</a>
-              <a href="tel:+918435999229">+91 8435999229</a>
-              <a href="tel:+919111527999">+91 9111527999</a>
+              <a href="tel:+918435999229">+91 9111597999</a>
+              <a href="tel:+919111527999">+91 9575555536</a>
             </div>
           </div>
         </address>
