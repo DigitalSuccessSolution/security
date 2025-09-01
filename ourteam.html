@@ -1131,69 +1131,67 @@
     </div>
 
     <div class="gallery-grid">
-  <div class="gallery-item">
-    <video autoplay muted loop playsinline>
-      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-    </video>
-    <div class="gallery-overlay">
-      <h3 class="gallery-title">Emergency Response Training</h3>
-      <p class="gallery-desc">Simulated fire, evacuation, and medical drills</p>
+      <div class="gallery-item">
+        <video autoplay muted loop playsinline>
+          <source src="video/1.mp4" type="video/mp4">
+        </video>
+        <div class="gallery-info">
+          <h3 class="gallery-title">Emergency Response Training</h3>
+          <p class="gallery-desc">Simulated fire, evacuation, and medical drills</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <video autoplay muted loop playsinline>
+          <source src="video/2.mp4" type="video/mp4">
+        </video>
+        <div class="gallery-info">
+          <h3 class="gallery-title">Crowd Control Practice</h3>
+          <p class="gallery-desc">Techniques to manage large gatherings safely</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <video autoplay muted loop playsinline>
+          <source src="video/3.mp4" type="video/mp4">
+        </video>
+        <div class="gallery-info">
+          <h3 class="gallery-title">K9 Training</h3>
+          <p class="gallery-desc">Obedience and detection drills with trained dogs</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <video autoplay muted loop playsinline>
+          <source src="video/4.mp4" type="video/mp4">
+        </video>
+        <div class="gallery-info">
+          <h3 class="gallery-title">Surveillance Training</h3>
+          <p class="gallery-desc">Hands-on practice with CCTV and monitoring systems</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <video autoplay muted loop playsinline>
+          <source src="video/5.mp4" type="video/mp4">
+        </video>
+        <div class="gallery-info">
+          <h3 class="gallery-title">Self-Defense Drills</h3>
+          <p class="gallery-desc">Martial arts and tactical defense techniques</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <video autoplay muted loop playsinline>
+          <source src="video/6.mp4" type="video/mp4">
+        </video>
+        <div class="gallery-info">
+          <h3 class="gallery-title">Cash Handling Training</h3>
+          <p class="gallery-desc">Secure and safe money transport simulations</p>
+        </div>
+      </div>
     </div>
   </div>
-
-  <div class="gallery-item">
-    <video autoplay muted loop playsinline>
-      <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
-    </video>
-    <div class="gallery-overlay">
-      <h3 class="gallery-title">Crowd Control Practice</h3>
-      <p class="gallery-desc">Techniques to manage large gatherings safely</p>
-    </div>
-  </div>
-
-  <div class="gallery-item">
-    <video autoplay muted loop playsinline>
-      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-    </video>
-    <div class="gallery-overlay">
-      <h3 class="gallery-title">K9 Training</h3>
-      <p class="gallery-desc">Obedience and detection drills with trained dogs</p>
-    </div>
-  </div>
-
-  <div class="gallery-item">
-    <video autoplay muted loop playsinline>
-      <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
-    </video>
-    <div class="gallery-overlay">
-      <h3 class="gallery-title">Surveillance Training</h3>
-      <p class="gallery-desc">Hands-on practice with CCTV and monitoring systems</p>
-    </div>
-  </div>
-
-  <div class="gallery-item">
-    <video autoplay muted loop playsinline>
-      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-    </video>
-    <div class="gallery-overlay">
-      <h3 class="gallery-title">Self-Defense Drills</h3>
-      <p class="gallery-desc">Martial arts and tactical defense techniques</p>
-    </div>
-  </div>
-
-  <div class="gallery-item">
-    <video autoplay muted loop playsinline>
-      <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
-    </video>
-    <div class="gallery-overlay">
-      <h3 class="gallery-title">Cash Handling Training</h3>
-      <p class="gallery-desc">Secure and safe money transport simulations</p>
-    </div>
-  </div>
-</div>
-
-    </div>
-  
 </section>
 
 <style>
@@ -1206,38 +1204,34 @@
   gap: 20px;
 }
 .gallery-item {
-  position: relative;
-  overflow: hidden;
   border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 .gallery-item video {
   width: 100%;
-  height: 100%;
+  height: 200px;
   object-fit: cover;
   display: block;
+  border-bottom: 1px solid #ddd;
 }
-.gallery-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
+.gallery-info {
   padding: 15px;
-  transition: 0.3s ease;
-  opacity: 0;
-}
-.gallery-item:hover .gallery-overlay {
-  opacity: 1;
+  background: #f9f9f9;
 }
 .gallery-title {
   font-size: 18px;
   font-weight: bold;
+  margin-bottom: 6px;
+  color: #222;
 }
 .gallery-desc {
   font-size: 14px;
+  color: #555;
 }
 </style>
+
 
    
    
