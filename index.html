@@ -589,6 +589,14 @@
 
 
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium About Section</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
     
@@ -621,7 +629,7 @@
       right: 0;
       height: 500px;
       background: linear-gradient(135deg, rgba(27,54,93,0.03) 0%, rgba(16,30,51,0.05) 100%);
-      z-index: -1; /* FIX: Send background behind everything */
+      z-index: -1;
     }
     
     .container {
@@ -742,7 +750,7 @@
       height: 450px;
       transition: all 0.3s ease;
       position: relative;
-      z-index: 1; /* FIX: Map always above background */
+      z-index: 1;
     }
     
     .map-container:hover {
@@ -759,7 +767,7 @@
     .text-content {
       padding: 0 1rem;
       position: relative;
-      z-index: 1; /* FIX: Text above overlay */
+      z-index: 1;
     }
     
     @media (min-width: 992px) {
@@ -859,12 +867,9 @@
       }
     }
   </style>
+</head>
+<body>
 
-
-
-
-<!-- map about start -->
-  
   <!-- About Section -->
   <section id="about">
     <div class="container">
@@ -921,8 +926,9 @@
         attribution: '&copy; OpenStreetMap',
       }).addTo(map);
       
+      // 🔴 Red Marker Icon
       const securityIcon = L.icon({
-        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
         shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
         iconSize: [25, 41],
         iconAnchor: [12, 41],
@@ -940,10 +946,13 @@
       
       const markers = {};
       cities.forEach((city) => {
-        const marker = L.marker(city.coords, {icon: securityIcon})
-          .addTo(map)
-          .bindPopup(`<b>${city.name}</b><br>Ronak Rudra Security Services`);
+        const marker = L.marker(city.coords, {icon: securityIcon}).addTo(map);
         markers[city.name] = marker;
+
+        // 👉 Direct Google Maps on click
+        marker.on("click", () => {
+          window.open(`https://www.google.com/maps?q=${city.coords[0]},${city.coords[1]}`, "_blank");
+        });
       });
       
       document.querySelectorAll(".city-btn").forEach((btn) => {
@@ -954,7 +963,6 @@
           const marker = markers[cityName];
           if (marker) {
             map.setView(marker.getLatLng(), 13, { animate: true, duration: 1.5 });
-            setTimeout(() => marker.openPopup(), 1000);
           }
         });
       });
@@ -962,9 +970,10 @@
       setTimeout(() => { map.invalidateSize(); }, 500);
     });
   </script>
+</body>
+</html>
 
 
-<!-- map about end -->
  
 
 
